@@ -1,0 +1,25 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: es-PE
+	valueFilterBehavior: independent
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["tablon","Dimension","Dim_Grupo0","DimGrupo1","Medida"]
+
+annotation PBI_ProTooling = ["TMDLView_Desktop","DevMode"]
+
+annotation __TEdtr = 1
+
+ref table tablon
+ref table Dim_Calendar
+ref table Dimension
+ref table Medida
+
+ref cultureInfo es-ES
+

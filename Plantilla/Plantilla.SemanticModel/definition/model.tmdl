@@ -1,0 +1,36 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup 'Fact Tables'
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup 'Dimension Tables'
+
+	annotation PBI_QueryGroupOrder = 1
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["DimRegion","DimProduct","DimDate","DimCustomer","DimChannel","DataDictionary","FactTraffic","FactSales","Medida"]
+
+annotation __TEdtr = 1
+
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
+
+ref table DimRegion
+ref table DimProduct
+ref table DimDate
+ref table DimCustomer
+ref table DimChannel
+ref table DataDictionary
+ref table FactTraffic
+ref table FactSales
+ref table Medida
+
+ref cultureInfo en-US
+

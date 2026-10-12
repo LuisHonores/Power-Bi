@@ -1,0 +1,43 @@
+table DimChannel
+	lineageTag: 987b8aa1-3665-44fd-8e41-c831abdd8480
+
+	column ChannelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 3bb1c35d-fe10-47b2-bf61-ac465204cc2f
+		summarizeBy: none
+		sourceColumn: ChannelKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: 43da74b0-4f49-4353-84cf-d8d1f41c94b0
+		summarizeBy: none
+		sourceColumn: Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChannelDescription
+		dataType: string
+		lineageTag: a520c7b0-0ef2-4edd-a975-9e9d70e3703b
+		summarizeBy: none
+		sourceColumn: ChannelDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimChannel = m
+		mode: import
+		queryGroup: 'Dimension Tables'
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\luhou\Downloads\DimChannel.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ChannelKey", Int64.Type}, {"Channel", type text}, {"ChannelDescription", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,63 @@
+table Dimension
+	lineageTag: 5f5530ca-062f-4a06-b514-b7d1e349687f
+
+	column GRUPO_1
+		dataType: string
+		lineageTag: 91eacfab-1494-40e8-8046-d9bad0c61504
+		summarizeBy: none
+		sourceColumn: GRUPO_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column GRUPO_0
+		dataType: string
+		lineageTag: b8a6be59-831b-4545-acf7-d07189e0d014
+		summarizeBy: none
+		sourceColumn: GRUPO_0
+		sortByColumn: IdsGrupo_0
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdsGrupo_0
+		dataType: int64
+		formatString: 0
+		lineageTag: e5c1f398-2e3d-4c67-974a-8d80b084b86f
+		summarizeBy: none
+		sourceColumn: IdsGrupo_0
+
+		annotation SummarizationSetBy = Automatic
+
+	column IdsGrupo1
+		dataType: int64
+		formatString: 0
+		lineageTag: 9ac597c1-2039-4783-b9ce-d07fb584f0b4
+		summarizeBy: none
+		sourceColumn: IdsGrupo1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dimension = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\luhou\OneDrive\PB\Fuente\Estado de Resultados.xlsx"), null, true),
+				    tablon_Sheet = Origen{[Item="tablon",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(tablon_Sheet, [PromoteAllScalars=true]),
+				    #"Personalizada agregada" = Table.AddColumn(#"Encabezados promovidos", "Fecha", each "01/01/"&Text.From([PERIODO])),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Personalizada agregada",{{"PERIODO", Int64.Type}, {"GRUPO_1", type text}, {"GRUPO_0", type text}, {"Valor", Int64.Type}, {"Fecha", type date}}),
+				    #"Otras columnas quitadas" = Table.SelectColumns(#"Tipo cambiado",{"GRUPO_0", "GRUPO_1"}),
+				    #"Filas agrupadas" = Table.Group(#"Otras columnas quitadas", {"GRUPO_1", "GRUPO_0"}, {{"Recuento", each Table.RowCount(_), Int64.Type}}),
+				    #"Consultas combinadas" = Table.NestedJoin(#"Filas agrupadas", {"GRUPO_0"}, Dim_Grupo0, {"GRUPO_0"}, "Dim_Grupo0", JoinKind.LeftOuter),
+				    #"Se expandió Dim_Grupo0" = Table.ExpandTableColumn(#"Consultas combinadas", "Dim_Grupo0", {"IdsGrupo_0"}, {"IdsGrupo_0"}),
+				    #"Consultas combinadas1" = Table.NestedJoin(#"Se expandió Dim_Grupo0", {"GRUPO_1"}, DimGrupo1, {"GRUPO_1"}, "DimGrupo1", JoinKind.LeftOuter),
+				    #"Se expandió DimGrupo1" = Table.ExpandTableColumn(#"Consultas combinadas1", "DimGrupo1", {"IdsGrupo1"}, {"IdsGrupo1"}),
+				    #"Otras columnas quitadas1" = Table.SelectColumns(#"Se expandió DimGrupo1",{"GRUPO_1", "GRUPO_0", "IdsGrupo_0", "IdsGrupo1"})
+				in
+				    #"Otras columnas quitadas1"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

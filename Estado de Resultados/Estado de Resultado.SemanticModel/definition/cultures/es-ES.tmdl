@@ -1,0 +1,3571 @@
+cultureInfo es-ES
+
+	linguisticMetadata =
+			{
+			  "Version": "4.1.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "tablon": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "tablon"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tablon": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tablon.periodo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "tablon",
+			          "ConceptualProperty": "PERIODO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "periodo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "tablon.valor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "tablon",
+			          "ConceptualProperty": "Valor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "valor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "courage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "bravery": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "heroism": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "fearlessness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "boldness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "gallantry": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "lionheartedness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pluck": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "spirit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "nerve": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "tablon.fecha": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "tablon",
+			          "ConceptualProperty": "Fecha"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fecha": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "tablon.ids_grupo_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "tablon",
+			          "ConceptualProperty": "IdsGrupo1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ids grupo 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id grupo 1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "IdsGrupo1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "tablon.ids_grupo_0": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "tablon",
+			          "ConceptualProperty": "IdsGrupo_0"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ids grupo 0": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id grupo 0": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "IdsGrupo_0": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendar": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Dim_Calendar": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "calendar": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dim almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "dim diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "almanac": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "datebook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "agenda": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "logbook": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "diary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendar.month_no": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "MonthNo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month no": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "MonthNo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "month number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "mth no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.year_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "YearMonth"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "year month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "YearMonth": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "year mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.weekday_no": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "WeekdayNo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "weekday no": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "WeekdayNo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "weekday number": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendar.weekday": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dim_Calendar",
+			          "ConceptualProperty": "Weekday"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "weekday": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ordinary": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "standard": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "basic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "routine": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "dimension": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dimension"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dimension": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "measurement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "length": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "height": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "width": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "breadth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "facet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "feature": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "factor": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "dimension.grupo_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dimension",
+			          "ConceptualProperty": "GRUPO_1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupo 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "GRUPO_1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dimension.grupo_0": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dimension",
+			          "ConceptualProperty": "GRUPO_0"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "grupo 0": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "GRUPO_0": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dimension.ids_grupo_0": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dimension",
+			          "ConceptualProperty": "IdsGrupo_0"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ids grupo 0": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id grupo 0": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "IdsGrupo_0": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dimension.ids_grupo_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Dimension",
+			          "ConceptualProperty": "IdsGrupo1"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ids grupo 1": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "id grupo 1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "IdsGrupo1": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.entity_2024_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "2024_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "2024_": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "2024": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.entity_2023_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "2023_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "2023_": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "2023": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.VAR_barras": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "VAR_Barras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "VAR barras": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "VAR_Barras": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.entity__2024__FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "_2024_ FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_2024_ FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.entity__2023__FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "_2023_ FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_2023_ FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.var_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "VAR_%"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "var_%": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "var_ percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "var_ pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "Δ%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_bruta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "GananciaBruta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia bruta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "GananciaBruta": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.var_val_financieros1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Var_Val_Financieros"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "var val financieros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Var_Val_Financieros": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.pre_val_financieros1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Pre_Val_Financieros"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pre val financieros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Pre_Val_Financieros": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ingreso": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ingreso"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ingreso": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.costo_de_ventas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Costo de ventas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo de ventas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_bruta1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Bruta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia bruta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_operativa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Operativa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia operativa": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_antes_de_impuesto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Antes de Impuesto"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia antes de impuesto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_neta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Neta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia neta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_operativa_V2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Operativa V2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia operativa V2": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_antes_de_impuesto_V2": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Antes de Impuesto V2"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia antes de impuesto V2": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.val_financieros1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Val_Financieros"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "val financieros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Val_Financieros": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.entity__VAR__FormatString": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "_VAR_ FormatString"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "_VAR_ FormatString": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.costo_de_ventas_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Costo de ventas_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "costo de ventas_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_antes_de_impuesto_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Antes de Impuesto_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia antes de impuesto_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_antes_de_impuesto_V2_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Antes de Impuesto V2_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia antes de impuesto V2_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_bruta_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Bruta_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia bruta_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_neta_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Neta_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia neta_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_operativa_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Operativa_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia operativa_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_operativa_V2_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia Operativa V2_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia operativa V2_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.GananciaBruta_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "GananciaBruta_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "GananciaBruta_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ingreso_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ingreso_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ingreso_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.pre_val_financieros": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Pre_Val_Financieros_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pre val financieros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Pre_Val_Financieros_": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.val_financieros": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Val_Financieros_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "val financieros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Val_Financieros_": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.var_val_financieros": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Var_Val_Financieros_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "var val financieros": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Var_Val_Financieros_": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "%": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.ganancia_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "Ganancia_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ganancia_": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.var_1": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "VAR_"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "var_": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Δ": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.VAR__barras": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medida",
+			          "ConceptualProperty": "VAR_%_barras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "VAR_%_barras": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "var_ percentage _barra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "var_ pct _barra": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "tablon_has_dimension": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "dimension"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_dimensions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "tablon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_tablons"
+			        }
+			      ]
+			    },
+			    "tablon_has_dim_calendar": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_dim_calendars"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "tablon"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_tablons"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_VAR__barras": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.VAR__barras": {
+			          "Target": {
+			            "Entity": "medida.VAR__barras"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.VAR__barras"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_VAR__barras"
+			        }
+			      ]
+			    },
+			    "dimension_has_medida_VAR__barras": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "medida.VAR__barras": {
+			          "Target": {
+			            "Entity": "medida.VAR__barras"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "medida.VAR__barras"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_VAR__barras"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_var_1": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.var_1": {
+			          "Target": {
+			            "Entity": "medida.var_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.var_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_var_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_": {
+			          "Target": {
+			            "Entity": "medida.ganancia_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_var_val_financieros": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.var_val_financieros": {
+			          "Target": {
+			            "Entity": "medida.var_val_financieros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.var_val_financieros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_var_val_financieros"
+			        }
+			      ]
+			    },
+			    "dimension_has_medida_var_val_financieros": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "medida.var_val_financieros": {
+			          "Target": {
+			            "Entity": "medida.var_val_financieros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "medida.var_val_financieros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_var_val_financieros"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_val_financieros": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.val_financieros": {
+			          "Target": {
+			            "Entity": "medida.val_financieros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.val_financieros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_val_financieros"
+			        }
+			      ]
+			    },
+			    "dimension_has_medida_val_financieros": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "medida.val_financieros": {
+			          "Target": {
+			            "Entity": "medida.val_financieros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "medida.val_financieros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_val_financieros"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_pre_val_financieros": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.pre_val_financieros": {
+			          "Target": {
+			            "Entity": "medida.pre_val_financieros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.pre_val_financieros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_pre_val_financieros"
+			        }
+			      ]
+			    },
+			    "dimension_has_medida_pre_val_financieros": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "medida.pre_val_financieros": {
+			          "Target": {
+			            "Entity": "medida.pre_val_financieros"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "medida.pre_val_financieros"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_pre_val_financieros"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ingreso_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ingreso_": {
+			          "Target": {
+			            "Entity": "medida.ingreso_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ingreso_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ingreso_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_GananciaBruta_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.GananciaBruta_": {
+			          "Target": {
+			            "Entity": "medida.GananciaBruta_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.GananciaBruta_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_GananciaBruta_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_operativa_V2_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_operativa_V2_": {
+			          "Target": {
+			            "Entity": "medida.ganancia_operativa_V2_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_operativa_V2_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_operativa_V2_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_operativa_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_operativa_": {
+			          "Target": {
+			            "Entity": "medida.ganancia_operativa_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_operativa_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_operativa_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_neta_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_neta_": {
+			          "Target": {
+			            "Entity": "medida.ganancia_neta_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_neta_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_neta_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_bruta_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_bruta_": {
+			          "Target": {
+			            "Entity": "medida.ganancia_bruta_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_bruta_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_bruta_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_antes_de_impuesto_V2_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_antes_de_impuesto_V2_": {
+			          "Target": {
+			            "Entity": "medida.ganancia_antes_de_impuesto_V2_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_antes_de_impuesto_V2_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_antes_de_impuesto_V2_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_antes_de_impuesto_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_antes_de_impuesto_": {
+			          "Target": {
+			            "Entity": "medida.ganancia_antes_de_impuesto_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_antes_de_impuesto_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_antes_de_impuesto_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_costo_de_ventas_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.costo_de_ventas_": {
+			          "Target": {
+			            "Entity": "medida.costo_de_ventas_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.costo_de_ventas_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_costo_de_ventas_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_val_financieros1": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.val_financieros1": {
+			          "Target": {
+			            "Entity": "medida.val_financieros1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.val_financieros1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_val_financieros1"
+			        }
+			      ]
+			    },
+			    "dimension_has_medida_val_financieros1": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "medida.val_financieros1": {
+			          "Target": {
+			            "Entity": "medida.val_financieros1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "medida.val_financieros1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_val_financieros1"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_antes_de_impuesto_V2": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_antes_de_impuesto_V2": {
+			          "Target": {
+			            "Entity": "medida.ganancia_antes_de_impuesto_V2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_antes_de_impuesto_V2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_antes_de_impuesto_V2"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_operativa_V2": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_operativa_V2": {
+			          "Target": {
+			            "Entity": "medida.ganancia_operativa_V2"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_operativa_V2"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_operativa_V2"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_neta": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_neta": {
+			          "Target": {
+			            "Entity": "medida.ganancia_neta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_neta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_neta"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_antes_de_impuesto": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_antes_de_impuesto": {
+			          "Target": {
+			            "Entity": "medida.ganancia_antes_de_impuesto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_antes_de_impuesto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_antes_de_impuesto"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_operativa": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_operativa": {
+			          "Target": {
+			            "Entity": "medida.ganancia_operativa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_operativa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_operativa"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_bruta1": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_bruta1": {
+			          "Target": {
+			            "Entity": "medida.ganancia_bruta1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_bruta1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_bruta"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_costo_de_ventas": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.costo_de_ventas": {
+			          "Target": {
+			            "Entity": "medida.costo_de_ventas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.costo_de_ventas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_costo_de_ventas"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ingreso": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ingreso": {
+			          "Target": {
+			            "Entity": "medida.ingreso"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ingreso"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ingreso"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia": {
+			          "Target": {
+			            "Entity": "medida.ganancia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_pre_val_financieros1": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.pre_val_financieros1": {
+			          "Target": {
+			            "Entity": "medida.pre_val_financieros1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.pre_val_financieros1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_pre_val_financieros1"
+			        }
+			      ]
+			    },
+			    "dimension_has_medida_pre_val_financieros1": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "medida.pre_val_financieros1": {
+			          "Target": {
+			            "Entity": "medida.pre_val_financieros1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "medida.pre_val_financieros1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_pre_val_financieros1"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_var_val_financieros1": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.var_val_financieros1": {
+			          "Target": {
+			            "Entity": "medida.var_val_financieros1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.var_val_financieros1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_var_val_financieros1"
+			        }
+			      ]
+			    },
+			    "dimension_has_medida_var_val_financieros1": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "medida.var_val_financieros1": {
+			          "Target": {
+			            "Entity": "medida.var_val_financieros1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "medida.var_val_financieros1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_var_val_financieros1"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_ganancia_bruta": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.ganancia_bruta": {
+			          "Target": {
+			            "Entity": "medida.ganancia_bruta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.ganancia_bruta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ganancia_bruta1"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_var_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.var_": {
+			          "Target": {
+			            "Entity": "medida.var_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.var_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_var_1"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_VAR_barras": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.VAR_barras": {
+			          "Target": {
+			            "Entity": "medida.VAR_barras"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.VAR_barras"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_VAR_barras"
+			        }
+			      ]
+			    },
+			    "dimension_has_medida_VAR_barras": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "medida.VAR_barras": {
+			          "Target": {
+			            "Entity": "medida.VAR_barras"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "medida.VAR_barras"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_VAR_barras"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_entity_2023_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.entity_2023_": {
+			          "Target": {
+			            "Entity": "medida.entity_2023_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.entity_2023_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_2023_"
+			        }
+			      ]
+			    },
+			    "tablon_has_medida_entity_2024_": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "medida.entity_2024_": {
+			          "Target": {
+			            "Entity": "medida.entity_2024_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "medida.entity_2024_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_2024_"
+			        }
+			      ]
+			    },
+			    "dimension_has_ids_grupo_1": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "dimension.ids_grupo_1": {
+			          "Target": {
+			            "Entity": "dimension.ids_grupo_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "dimension.ids_grupo_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_ids_grupo_1"
+			        }
+			      ]
+			    },
+			    "dimension_has_ids_grupo_0": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "dimension.ids_grupo_0": {
+			          "Target": {
+			            "Entity": "dimension.ids_grupo_0"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "dimension.ids_grupo_0"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_ids_grupo_0"
+			        }
+			      ]
+			    },
+			    "dimension_has_grupo_0": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "dimension.grupo_0": {
+			          "Target": {
+			            "Entity": "dimension.grupo_0"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "dimension.grupo_0"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_grupo_0"
+			        }
+			      ]
+			    },
+			    "dimension_has_grupo_1": {
+			      "Binding": {
+			        "ConceptualEntity": "Dimension"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dimension": {
+			          "Target": {
+			            "Entity": "dimension"
+			          }
+			        },
+			        "dimension.grupo_1": {
+			          "Target": {
+			            "Entity": "dimension.grupo_1"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dimension"
+			            },
+			            "Object": {
+			              "Role": "dimension.grupo_1"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dimensions_have_grupo_1"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_weekday": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.weekday": {
+			          "Target": {
+			            "Entity": "dim_calendar.weekday"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.weekday"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_weekdays"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_weekday_no": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.weekday_no": {
+			          "Target": {
+			            "Entity": "dim_calendar.weekday_no"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.weekday_no"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_weekday_noes"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_year_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.year_month": {
+			          "Target": {
+			            "Entity": "dim_calendar.year_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.year_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_year_months"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.quarter": {
+			          "Target": {
+			            "Entity": "dim_calendar.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_quarters"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.month": {
+			          "Target": {
+			            "Entity": "dim_calendar.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_months"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_month_no": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.month_no": {
+			          "Target": {
+			            "Entity": "dim_calendar.month_no"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.month_no"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_month_noes"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.year": {
+			          "Target": {
+			            "Entity": "dim_calendar.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_years"
+			        }
+			      ]
+			    },
+			    "dim_calendar_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "Dim_Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendar": {
+			          "Target": {
+			            "Entity": "dim_calendar"
+			          }
+			        },
+			        "dim_calendar.date": {
+			          "Target": {
+			            "Entity": "dim_calendar.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendar"
+			            },
+			            "Object": {
+			              "Role": "dim_calendar.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendars_have_dates"
+			        }
+			      ]
+			    },
+			    "tablon_has_ids_grupo_0": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "tablon.ids_grupo_0": {
+			          "Target": {
+			            "Entity": "tablon.ids_grupo_0"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "tablon.ids_grupo_0"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_ids_grupo_0"
+			        }
+			      ]
+			    },
+			    "tablon_has_fecha": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "tablon.fecha": {
+			          "Target": {
+			            "Entity": "tablon.fecha"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "tablon.fecha"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_fechas"
+			        }
+			      ]
+			    },
+			    "tablon_has_valor": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "tablon.valor": {
+			          "Target": {
+			            "Entity": "tablon.valor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "tablon.valor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_valor"
+			        }
+			      ]
+			    },
+			    "tablon_has_periodo": {
+			      "Binding": {
+			        "ConceptualEntity": "tablon"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "tablon": {
+			          "Target": {
+			            "Entity": "tablon"
+			          }
+			        },
+			        "tablon.periodo": {
+			          "Target": {
+			            "Entity": "tablon.periodo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "tablon"
+			            },
+			            "Object": {
+			              "Role": "tablon.periodo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tablons_have_periodos"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
+			    }
+			  }
+			}
+		contentType: json
+

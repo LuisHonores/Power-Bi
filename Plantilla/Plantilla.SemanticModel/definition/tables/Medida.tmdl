@@ -1,0 +1,1407 @@
+table Medida
+	lineageTag: 025920f2-2394-4ec1-9d85-59d97df26149
+
+	measure HTML_Caratula_1920 =
+			
+			VAR _Ventas       = [Venta Neta AA]
+			VAR _Margen       = [Margen]
+			VAR _VarV         = [VAR Ventas Netas PY]
+			VAR _VarM         = [VAR Margen]
+			
+			VAR _VentasFmt    = FORMAT(_Ventas,         "$#,0")
+			VAR _MargenFmt    = FORMAT(_Margen,         "0.0%")
+			VAR _VarVFmt      = FORMAT(ABS(_VarV),      "0.00%")
+			VAR _VarMFmt      = FORMAT(ABS(_VarM),      "0.000")
+			
+			VAR _AV  = IF(_VarV >= 0, "▲", "▼")
+			VAR _CV  = IF(_VarV >= 0, "#08C792", "#ED2939")
+			VAR _BV  = IF(_VarV >= 0, "rgba(8,199,146,.13)",  "rgba(237,41,57,.13)")
+			VAR _BVB = IF(_VarV >= 0, "rgba(8,199,146,.22)",  "rgba(237,41,57,.22)")
+			
+			VAR _AM  = IF(_VarM >= 0, "▲", "▼")
+			VAR _CM  = IF(_VarM >= 0, "#08C792", "#ED2939")
+			VAR _BM  = IF(_VarM >= 0, "rgba(8,199,146,.13)",  "rgba(237,41,57,.13)")
+			VAR _BMB = IF(_VarM >= 0, "rgba(8,199,146,.22)",  "rgba(237,41,57,.22)")
+			
+			RETURN
+			"<html><head><meta charset='UTF-8'><style>
+			*{box-sizing:border-box;margin:0;padding:0;}
+			html{width:100%;height:100%;}
+			body{width:100vw;height:100vh;overflow:hidden;background:#0d1b2e;display:block;}
+			.wrapper{width:100vw;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+			.cover{width:1920px;height:1080px;transform-origin:top left;font-family:'Segoe UI',sans-serif;background:radial-gradient(ellipse at 30% 50%,#112240 0%,#0d1b2e 60%);position:relative;overflow:hidden;display:flex;flex-direction:row;align-items:stretch;}
+			.sweep{position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(72,184,222,.05) 50%,transparent 65%);background-size:300% 100%;animation:sweep 5s ease-in-out infinite;}
+			@keyframes sweep{0%,100%{background-position:200% 0;}50%{background-position:-100% 0;}}
+			.field{position:absolute;inset:0;opacity:.07;}
+			.field svg{width:100%;height:100%;}
+			.accent-bar{position:absolute;top:0;bottom:0;left:0;width:4px;z-index:10;background:linear-gradient(180deg,transparent,#48B8DE 30%,#4872A5 70%,transparent);background-size:100% 300%;animation:barScroll 3s linear infinite;}
+			@keyframes barScroll{0%{background-position:0 100%;}100%{background-position:0 -200%;}}
+			.sep{position:absolute;top:8%;bottom:8%;left:44%;width:1px;z-index:3;background:linear-gradient(180deg,transparent,rgba(72,184,222,.35) 20%,rgba(72,184,222,.35) 80%,transparent);animation:sepPulse 3s ease-in-out infinite;}
+			@keyframes sepPulse{0%,100%{opacity:.4;}50%{opacity:1;}}
+			.orb{position:absolute;border-radius:50%;filter:blur(60px);animation:orbPulse 4s ease-in-out infinite;}
+			.orb1{width:420px;height:420px;top:-80px;right:60px;background:rgba(72,184,222,.07);}
+			.orb2{width:280px;height:280px;bottom:-60px;right:200px;background:rgba(72,130,165,.08);animation-delay:2s;}
+			@keyframes orbPulse{0%,100%{opacity:.6;}50%{opacity:1;}}
+			.particle{position:absolute;border-radius:50%;background:#48B8DE;}
+			.pa{width:4px;height:4px;top:18%;left:47%;opacity:.35;animation:float 5s ease-in-out infinite;}
+			.pb{width:3px;height:3px;top:70%;left:62%;opacity:.25;animation:float 5s ease-in-out 1.3s infinite;}
+			.pc{width:6px;height:6px;top:32%;left:85%;opacity:.28;animation:float 5s ease-in-out 2.1s infinite;}
+			.pd{width:3px;height:3px;top:80%;left:78%;opacity:.2;animation:float 5s ease-in-out .7s infinite;}
+			.pe{width:5px;height:5px;top:12%;left:72%;opacity:.22;animation:float 5s ease-in-out 3s infinite;}
+			@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-18px);}}
+			.ring{position:absolute;border-radius:50%;border:1px solid rgba(72,184,222,.07);animation:ringPulse 5s ease-in-out infinite;}
+			.r1{width:380px;height:380px;top:-100px;right:40px;}
+			.r2{width:240px;height:240px;top:-40px;right:100px;animation-delay:1.5s;}
+			.r3{width:160px;height:160px;top:10px;right:160px;animation-delay:2.5s;}
+			@keyframes ringPulse{0%,100%{opacity:.4;transform:scale(1);}50%{opacity:.9;transform:scale(1.03);}}
+			.left-panel{position:relative;z-index:4;width:44%;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:80px 70px 80px 90px;}
+			.right-panel{position:relative;z-index:4;flex:1;display:flex;flex-direction:column;justify-content:center;align-items:stretch;padding:80px 80px 80px 60px;gap:28px;}
+			.logo-circle{width:72px;height:72px;border-radius:50%;background:rgba(72,184,222,.1);border:2px solid rgba(72,184,222,.45);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;animation:logoPulse 2.8s ease-in-out infinite;}
+			.logo-circle::after{content:'';position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(72,184,222,.15);}
+			@keyframes logoPulse{0%,100%{box-shadow:0 0 0 0 rgba(72,184,222,.3);}50%{box-shadow:0 0 0 12px rgba(72,184,222,0);}}
+			.logo-wrap{display:flex;align-items:center;gap:20px;margin-bottom:60px;}
+			.brand-name{font-size:30px;font-weight:700;color:#fff;letter-spacing:.5px;}
+			.brand-sub{font-size:11px;color:rgba(255,255,255,.38);letter-spacing:2.5px;text-transform:uppercase;margin-top:4px;}
+			.live-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(72,184,222,.1);border:1px solid rgba(72,184,222,.28);border-radius:24px;padding:8px 20px;margin-bottom:50px;}
+			.live-dot{width:8px;height:8px;border-radius:50%;background:#48B8DE;box-shadow:0 0 6px rgba(72,184,222,.8);animation:blink 1.4s ease-in-out infinite;}
+			@keyframes blink{0%,100%{opacity:.2;}50%{opacity:1;box-shadow:0 0 10px rgba(72,184,222,.9);}}
+			.live-text{font-size:11px;color:#48B8DE;letter-spacing:2px;text-transform:uppercase;font-weight:500;}
+			.h-line{height:1px;width:75%;background:linear-gradient(90deg,#48B8DE,rgba(72,184,222,.2));margin-bottom:40px;}
+			.tagline{font-size:15px;color:rgba(255,255,255,.38);line-height:1.75;max-width:340px;}
+			.tagline strong{color:rgba(255,255,255,.65);font-weight:500;}
+			.year-display{font-size:160px;font-weight:700;color:rgba(255,255,255,.03);line-height:1;letter-spacing:-6px;position:absolute;bottom:4%;left:4%;pointer-events:none;}
+			.mcard{background:rgba(255,255,255,.04);border:1px solid rgba(72,184,222,.18);border-radius:16px;padding:36px 42px;position:relative;overflow:hidden;transition:transform .35s,border-color .35s,background .35s;}
+			.mcard:hover{transform:translateY(-4px) scale(1.01);border-color:rgba(72,184,222,.55);background:rgba(72,184,222,.09);}
+			.mcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#48B8DE,rgba(72,184,222,.25),transparent);}
+			.cicon{position:absolute;bottom:16px;right:20px;opacity:.06;transition:opacity .3s;}
+			.mcard:hover .cicon{opacity:.14;}
+			.card-inner{position:relative;z-index:1;}
+			.clabel{font-size:11px;color:rgba(255,255,255,.4);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+			.crow{display:flex;align-items:baseline;gap:12px;}
+			.cval{font-size:64px;font-weight:700;color:#fff;line-height:1;letter-spacing:-1.5px;}
+			.cunit{font-size:15px;color:#48B8DE;font-weight:400;margin-bottom:4px;}
+			.cdelta{display:inline-flex;align-items:center;gap:6px;font-size:13px;padding:5px 16px;border-radius:20px;margin-top:10px;font-weight:500;transition:transform .3s;}
+			.mcard:hover .cdelta{transform:translateX(5px);}
+			</style></head><body>
+			<div class='wrapper'>
+			<div class='cover' id='cover'>
+			<div class='sweep'></div>
+			<div class='orb orb1'></div><div class='orb orb2'></div>
+			<div class='field'>
+			<svg viewBox='0 0 1920 1080' preserveAspectRatio='xMidYMid slice' xmlns='http://www.w3.org/2000/svg'>
+			<rect x='80' y='50' width='1760' height='980' fill='none' stroke='white' stroke-width='2.5'/>
+			<line x1='960' y1='50' x2='960' y2='1030' stroke='white' stroke-width='2'/>
+			<circle cx='960' cy='540' r='170' fill='none' stroke='white' stroke-width='2'/>
+			<circle cx='960' cy='540' r='7' fill='white'/>
+			<rect x='80' y='280' width='230' height='520' fill='none' stroke='white' stroke-width='2'/>
+			<rect x='1610' y='280' width='230' height='520' fill='none' stroke='white' stroke-width='2'/>
+			<rect x='80' y='380' width='100' height='320' fill='none' stroke='white' stroke-width='1.5'/>
+			<rect x='1720' y='380' width='100' height='320' fill='none' stroke='white' stroke-width='1.5'/>
+			<circle cx='80' cy='540' r='130' fill='none' stroke='white' stroke-width='1.5'/>
+			<circle cx='1840' cy='540' r='130' fill='none' stroke='white' stroke-width='1.5'/>
+			</svg>
+			</div>
+			<div class='particle pa'></div><div class='particle pb'></div><div class='particle pc'></div><div class='particle pd'></div><div class='particle pe'></div>
+			<div class='ring r1'></div><div class='ring r2'></div><div class='ring r3'></div>
+			<div class='accent-bar'></div>
+			<div class='sep'></div>
+			<div class='left-panel'>
+			<div class='logo-wrap'>
+			<div class='logo-circle'>
+			<svg width='34' height='34' viewBox='0 0 24 24' fill='none'><circle cx='12' cy='12' r='10' stroke='#48B8DE' stroke-width='1.5'/><path d='M12 4L15 9L21 9L16.5 13L18 19L12 15.5L6 19L7.5 13L3 9L9 9Z' fill='#48B8DE' opacity='.9'/></svg>
+			</div>
+			<div><div class='brand-name'>PitchSide Pro</div><div class='brand-sub'>Global Football Retail</div></div>
+			</div>
+			<div class='live-badge'><div class='live-dot'></div><span class='live-text'>Performance Dashboard · Live</span></div>
+			<div class='h-line'></div>
+			<div class='tagline'>Visión ejecutiva de <strong>ventas globales</strong> y <strong>márgenes</strong> </div>
+			<div class='year-display'>2024</div>
+			</div>
+			<div class='right-panel'>
+			<div class='mcard'>
+			<div class='cicon'><svg width='72' height='72' viewBox='0 0 72 72'><circle cx='36' cy='36' r='34' fill='none' stroke='#48B8DE' stroke-width='1.5'/><path d='M36 12L41 27L57 27L44 36L49 52L36 43L23 52L28 36L15 27L31 27Z' fill='#48B8DE'/></svg></div>
+			<div class='card-inner'>
+			<div class='clabel'>Ventas Netas 2025</div>
+			<div class='crow'><div class='cval'>" & _VentasFmt & "</div><div class='cunit'>USD</div></div>
+			<div class='cdelta' style='background:" & _BV & ";color:" & _CV & ";border:1px solid " & _BVB & ";'>" & _AV & " " & _VarVFmt & " vs año anterior</div>
+			</div>
+			</div>
+			<div class='mcard'>
+			<div class='cicon'><svg width='72' height='72' viewBox='0 0 72 72'><rect x='8' y='38' width='12' height='26' rx='3' fill='#48B8DE'/><rect x='26' y='24' width='12' height='40' rx='3' fill='#48B8DE'/><rect x='44' y='12' width='12' height='52' rx='3' fill='#48B8DE'/></svg></div>
+			<div class='card-inner'>
+			<div class='clabel'>Margen Neto 2025</div>
+			<div class='crow'><div class='cval'>" & _MargenFmt & "</div></div>
+			<div class='cdelta' style='background:" & _BM & ";color:" & _CM & ";border:1px solid " & _BMB & ";'>" & _AM & " " & _VarMFmt & " pp vs año anterior</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+			<script>
+			(function(){
+			  function scale(){
+			    var el=document.getElementById('cover');
+			    var W=document.documentElement.clientWidth;
+			    var H=document.documentElement.clientHeight;
+			    if(!W||!H)return;
+			    var s=Math.min(W/1920,H/1080);
+			    el.style.transform='scale('+s+')';
+			    el.style.position='absolute';
+			    el.style.top=Math.round((H-1080*s)/2)+'px';
+			    el.style.left=Math.round((W-1920*s)/2)+'px';
+			  }
+			  scale();
+			  setTimeout(scale,100);
+			  setTimeout(scale,400);
+			  window.addEventListener('resize',scale);
+			})();
+			</script>
+			</body></html>"
+		lineageTag: 5a354d98-d317-4a73-b991-cb526bff1c80
+
+	measure 'Venta Neta' = SUM(FactSales[NetRevenue])
+		lineageTag: 5f586988-2eb9-4b3a-8249-9b51580fed2b
+
+		formatStringDefinition =
+				VAR _ValorActual =
+				    SELECTEDMEASURE()
+				VAR _NumeroFormato =
+				    SWITCH (
+				        TRUE (),
+				        _ValorActual <= 1E3, "#,0.",
+				        _ValorActual <= 1E4, "#,0,.00 K",
+				        _ValorActual <= 1E5, "#,0,.0 K",
+				        _ValorActual <= 1E6, "#,0,. K",
+				        _ValorActual <= 1E7, "#,0,,.00 M",
+				        _ValorActual <= 1E8, "#,0,,.0 M",
+				        _ValorActual <= 1E9, "#,0,,. M"
+				    )
+				RETURN
+				    _NumeroFormato
+
+	measure 'Venta Netas PY' = ```
+			
+			VAR Inicio_ =   20240101
+			VAR Final_ = 20241231
+			VAR result =
+			CALCULATE ( [Venta Neta] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+			
+			```
+		lineageTag: 9f500ba9-b3d6-4111-aa02-3f957159559e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAR Ventas Netas PY' = DIVIDE([Venta Neta AA] - [Venta Netas PY] ,[Venta Netas PY])
+		lineageTag: 203cb49a-17b9-4df7-bee0-e5716df01a30
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Utilidad = SUM(FactSales[Profit])
+		lineageTag: c7d60979-9744-44c7-817f-85ca2adad5fd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Margen = DIVIDE([UtilidadAA], [Venta Neta AA])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 5797a8a8-07b8-4d4d-baf4-5eb9669b8176
+
+	measure 'Margen PY' =
+			
+			DIVIDE([UtilidadPY], [Venta Netas PY])
+		formatString: 0.0000
+		lineageTag: a230424d-477e-4907-8844-30ca8fe7a90d
+
+	measure 'VAR Margen' = DIVIDE([Margen] - [Margen PY] ,[Margen PY])
+		lineageTag: 6ff343b6-9167-450c-bacb-3958307a68e1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Leyenda_HTML = ```
+			
+			"
+			<div style='font-family:Segoe UI; font-size:9px; color:#333;'>
+			  <strong>Leyenda:</strong><br>
+			  <div style='display:flex; align-items:center; margin-top:4px;'>
+			    <div style='width:16px; height:16px; background-color:#48B8DE; margin-right:6px; border-radius:2px;'></div>
+			    <span>Ventas Netas</span>
+			  </div>
+			  <div style='display:flex; align-items:center; margin-top:4px;'>
+			    <div style='width:16px; height:16px; background-color:#d4dae0; margin-right:6px; border-radius:2px;'></div>
+			    <span>Ventas Netas (1MA)</span>
+			  </div>
+			</div>
+			"
+			
+			```
+		lineageTag: 9dd78904-a914-448d-8ead-a8acbc2959d2
+
+	measure 'HTML Football Events' = ```
+			
+			VAR _ventas_acum = [Venta Neta]
+			VAR _variacion   = [VAR Margen]
+			VAR _fmt_acum    = FORMAT(_ventas_acum, "#,##0")
+			VAR _fmt_var     = FORMAT(ABS(_variacion), "0.00") & "%"
+			VAR _sign        = IF(_variacion >= 0, "+", "-")
+			VAR _color_var   = IF(_variacion >= 0, "#08C792", "#ED2939")
+			
+			VAR _sales_array =
+			    CONCATENATEX(
+			        CALCULATETABLE(
+			            ADDCOLUMNS(
+			                VALUES(DimDate[YearMonth]),
+			                "_v", [Venta Neta]
+			            ),
+			            ALLSELECTED(DimDate)
+			        ),
+			        [_v],
+			        ",",
+			        DimDate[YearMonth], ASC
+			    )
+			
+			VAR _labels_array =
+			    CONCATENATEX(
+			        CALCULATETABLE(
+			            VALUES(DimDate[YearMonth]),
+			            ALLSELECTED(DimDate)
+			        ),
+			        "'" & DimDate[YearMonth] & "'",
+			        ",",
+			        DimDate[YearMonth], ASC
+			    )
+			
+			RETURN
+			
+			"<style>" &
+			"*{box-sizing:border-box;margin:0;padding:0}" &
+			"body{font-family:'Segoe UI',sans-serif;background:#F6F7F9;padding:24px 28px}" &
+			".top-bar{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid #E5E7EB}" &
+			".kpi-row{display:flex;gap:28px}" &
+			".kpi{display:flex;flex-direction:column;gap:2px}" &
+			".kpi-label{font-size:10px;color:#9CA3AF;letter-spacing:0.08em;text-transform:uppercase}" &
+			".kpi-val{font-size:24px;font-weight:300;color:#1F2937;letter-spacingrequestAnimationFrame:-0.03em}" &
+			".kpi-delta{font-size:11px;font-weight:500}" &
+			".kpi-sub{font-size:10px;color:#9CA3AF;margin-top:1px}" &
+			".sep{width:1px;background:#E5E7EB;height:38px;align-self:flex-end}" &
+			".period-tag{font-size:10px;color:#B0B8C4;letter-spacing:0.06em;text-transform:uppercase;text-align:right;line-height:1.8}" &
+			".chart-wrap{position:relative;width:100%;height:310px}" &
+			".legend-row{display:flex;gap:20px;align-items:center;margin-top:12px;padding-top:10px;border-top:0.5px solid #E5E7EB}" &
+			".leg{display:flex;align-items:center;gap:7px;font-size:10px;color:#9CA3AF;letter-spacing:0.04em}" &
+			".leg-line{width:22px;height:1.5px;background:#2F9BC4}" &
+			".leg-diamond{width:8px;height:8px;background:#1F2937;transform:rotate(45deg)}" &
+			".leg-hint{margin-left:auto;font-size:10px;color:#D1D8E0;letter-spacing:0.03em}" &
+			".ann-panel{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}" &
+			".ann-card{background:#FFFFFF;border:0.5px solid #E9ECF0;border-top:2px solid #2F9BC4;padding:14px 16px 15px}" &
+			".ann-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}" &
+			".ann-name{font-size:12px;font-weight:600;color:#1F2937;line-height:1.35}" &
+			".ann-date{font-size:10px;color:#9CA3AF;letter-spacing:0.06em;white-space:nowrap;margin-left:8px;flex-shrink:0}" &
+			".ann-body{font-size:11px;color:#6B7280;line-height:1.68}" &
+			".ann-badge{display:inline-block;margin-top:9px;font-size:9px;font-weight:600;letter-spacing:0.09em;color:#185FA5;background:#EAF6FB;padding:2px 9px;text-transform:uppercase}" &
+			"</style>" &
+			
+			"<div class='top-bar'>" &
+			  "<div class='kpi-row'>" &
+			    "<div class='kpi'>" &
+			      "<span class='kpi-label'>Ventas acumuladas</span>" &
+			      "<span class='kpi-val'>S/ " & _fmt_acum & "</span>" &
+			      "<span class='kpi-delta' style='color:" & _color_var & "'>" & _sign & _fmt_var & " vs período ant.</span>" &
+			    "</div>" &
+			    "<div class='sep'></div>" &
+			    "<div class='kpi'>" &
+			      "<span class='kpi-label'>Pico de ventas</span>" &
+			      "<span class='kpi-val'>Nov 2022</span>" &
+			      "<span class='kpi-sub'>Copa del Mundo Qatar</span>" &
+			    "</div>" &
+			    "<div class='sep'></div>" &
+			    "<div class='kpi'>" &
+			      "<span class='kpi-label'>Eventos identificados</span>" &
+			      "<span class='kpi-val'>5</span>" &
+			      "<span class='kpi-sub'>Eventos de fútbol global</span>" &
+			    "</div>" &
+			  "</div>" &
+			  "<div class='period-tag'>Enero 2021 – Setiembre 2023</div>" &
+			"</div>" &
+			
+			"<div class='chart-wrap'>" &
+			  "<canvas id='sc' role='img' aria-label='Ventas mensuales con eventos de fútbol marcados.'>" &
+			    "Gráfico de ventas con hitos de fútbol global." &
+			  "</canvas>" &
+			"</div>" &
+			
+			"<div class='legend-row'>" &
+			  "<div class='leg'><div class='leg-line'></div>Ventas mensuales</div>" &
+			  "<div class='leg'><div class='leg-diamond'></div>Evento de fútbol global</div>" &
+			  "<span class='leg-hint'>Etiquetas de evento visibles sobre el gráfico</span>" &
+			"</div>" &
+			
+			"<div class='ann-panel' id='annPanel'></div>" &
+			
+			"<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js'></script>" &
+			"<script>" &
+			
+			"var labels=[" & _labels_array & "];" &
+			"var sales=[" & _sales_array & "];" &
+			
+			"var events={" &
+			  "5:{short:'Copa América 2021',date:'Jun 2021',name:'Copa América — Brasil 2021',desc:'Torneo continental disputado en Brasil. Argentina campeón por primera vez en 28 años liderado por Messi. +500M espectadores acumulados en TV y plataformas digitales a nivel global.',badge:'CONMEBOL · Copa América'}," &
+			  "6:{short:'Final Copa América',date:'Jul 2021',name:'Final Copa América 2021',desc:'Argentina venció a Brasil 1-0 en el Maracaná. Primer título mayor de Messi con la selección. Pico máximo de audiencia en Latinoamérica y récord de consumo en categorías deportivas.',badge:'CONMEBOL · Final'}," &
+			  "17:{short:'Final Champions 22',date:'Jun 2022',name:'Final UEFA Champions League — París 2022',desc:'Real Madrid derrotó al Liverpool 1-0 en el Stade de France con gol de Vinicius Jr. Más de 450M espectadores globales e impacto directo en demanda de productos deportivos premium.',badge:'UEFA Champions League'}," &
+			  "22:{short:'Copa del Mundo Qatar',date:'Nov 2022',name:'Copa del Mundo — Qatar 2022',desc:'Primer mundial en territorio árabe y el de mayor audiencia en la historia: +5.000M espectadores acumulados. Argentina campeón ante Francia 3-3 (4-2 pen.). Pico máximo de ventas del período.',badge:'FIFA World Cup'}," &
+			  "29:{short:'Final Champions 23',date:'Jun 2023',name:'Final UEFA Champions League — Estambul 2023',desc:'Manchester City completó el triplete histórico al vencer al Inter de Milán 1-0. Más de 400M espectadores en directo. Alto impacto en el segmento deportivo premium a nivel global.',badge:'UEFA Champions League'}" &
+			"};" &
+			
+			"var evIdxs=Object.keys(events).map(Number);" &
+			
+			"var annPlugin={id:'annPlugin',afterDraw:function(chart){" &
+			  "var ctx=chart.ctx,x=chart.scales.x,y=chart.scales.y,top=chart.chartArea.top,bottom=chart.chartArea.bottom;" &
+			  "evIdxs.forEach(function(i){" &
+			    "var xp=x.getPixelForValue(i);" &
+			    "ctx.save();" &
+			    "ctx.beginPath();ctx.setLineDash([2,5]);ctx.strokeStyle='rgba(47,155,196,0.22)';ctx.lineWidth=1;" &
+			    "ctx.moveTo(xp,top+26);ctx.lineTo(xp,bottom);ctx.stroke();ctx.setLineDash([]);" &
+			    "var txt=events[i].short;" &
+			    "ctx.font='600 9px Segoe UI,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';" &
+			    "var tw=ctx.measureText(txt).width,bx=xp-tw/2-7,by=top+4,bw=tw+14,bh=17;" &
+			    "ctx.fillStyle='#EAF6FB';ctx.fillRect(bx,by,bw,bh);" &
+			    "ctx.strokeStyle='#2F9BC4';ctx.lineWidth=0.5;ctx.strokeRect(bx,by,bw,bh);" &
+			    "ctx.beginPath();ctx.moveTo(bx,by);ctx.lineTo(bx+bw,by);ctx.strokeStyle='#2F9BC4';ctx.lineWidth=1.5;ctx.stroke();" &
+			    "ctx.fillStyle='#185FA5';ctx.fillText(txt,xp,by+bh/2);" &
+			    "ctx.restore();" &
+			  "});" &
+			"}};" &
+			
+			"new Chart(document.getElementById('sc'),{" &
+			  "type:'line'," &
+			  "data:{labels:labels,datasets:[" &
+			    "{label:'Ventas',data:sales,borderColor:'#2F9BC4',borderWidth:1.8,backgroundColor:'rgba(47,155,196,0.04)',fill:true,tension:0.38," &
+			     "pointRadius:sales.map(function(_,i){return evIdxs.includes(i)?0:2;}),pointBackgroundColor:'#2F9BC4',pointBorderColor:'#2F9BC4',pointBorderWidth:0,pointHoverRadius:6}," &
+			    "{label:'Evento',data:sales.map(function(v,i){return evIdxs.includes(i)?v:null;}),borderColor:'transparent',backgroundColor:'transparent'," &
+			     "pointRadius:10,pointHoverRadius:12,pointBackgroundColor:'#FFFFFF',pointBorderColor:'#1F2937',pointBorderWidth:1.5,pointStyle:'rectRot',showLine:false}" &
+			  "]}," &
+			  "options:{responsive:true,maintainAspectRatio:false,layout:{padding:{top:32,right:6,bottom:0,left:4}}," &
+			    "plugins:{legend:{display:false}," &
+			      "tooltip:{backgroundColor:'#1F2937',titleColor:'#F9FAFB',bodyColor:'#9CA3AF'," &
+			        "titleFont:{family:'Segoe UI',size:11,weight:'600'},bodyFont:{family:'Segoe UI',size:11}," &
+			        "padding:12,borderColor:'#374151',borderWidth:0.5,displayColors:false," &
+			        "filter:function(item){return item.datasetIndex===0;}," &
+			        "callbacks:{" &
+			          "title:function(ctx){return labels[ctx[0].dataIndex];}," &
+			          "label:function(ctx){var v=Math.round(ctx.parsed.y).toLocaleString('es-PE');var ev=events[ctx.dataIndex];if(ev){return['Ventas: S/ '+v,'Evento: '+ev.name];}return 'Ventas: S/ '+v;}" &
+			        "}" &
+			      "}" &
+			    "}," &
+			    "scales:{" &
+			      "x:{grid:{color:'rgba(229,231,235,0.45)',drawBorder:false},ticks:{font:{family:'Segoe UI',size:10},color:'#B0B8C4',maxRotation:0,autoSkip:true,maxTicksLimit:12},border:{display:false}}," &
+			      "y:{display:true,grid:{color:'rgba(229,231,235,0.45)',drawBorder:false},ticks:{display:false},border:{display:false},title:{display:false}}" &
+			    "}" &
+			  "}," &
+			  "plugins:[annPlugin]" &
+			"});" &
+			
+			"var panel=document.getElementById('annPanel');" &
+			"evIdxs.forEach(function(i){" &
+			  "var ev=events[i],c=document.createElement('div');" &
+			  "c.className='ann-card';" &
+			  "c.innerHTML='<div class=ann-head><div class=ann-name>'+ev.name+'</div><div class=ann-date>'+ev.date+'</div></div><div class=ann-body>'+ev.desc+'</div><div class=ann-badge>'+ev.badge+'</div>';" &
+			  "panel.appendChild(c);" &
+			"});" &
+			
+			"</script>"
+			
+			```
+		lineageTag: 2246d1d8-01da-4c43-9b7f-beb1a49b98d2
+
+	measure www = ```
+			
+			VAR _ventas_acum = [Venta Neta]
+			VAR _variacion   = [VAR Margen]
+			VAR _fmt_acum    = FORMAT(_ventas_acum, "#,##0")
+			VAR _fmt_var     = FORMAT(ABS(_variacion), "0.00") & "%"
+			VAR _sign        = IF(_variacion >= 0, "+", "-")
+			VAR _color_var   = IF(_variacion >= 0, "#08C792", "#ED2939")
+			
+			VAR _sales_array =
+			    CONCATENATEX(
+			        CALCULATETABLE(
+			            ADDCOLUMNS(
+			                VALUES(DimDate[YearMonth]),
+			                "_v", [Venta Neta]
+			            ),
+			            ALLSELECTED(DimDate)
+			        ),
+			        [_v],
+			        ",",
+			        DimDate[YearMonth], ASC
+			    )
+			
+			VAR _labels_array =
+			    CONCATENATEX(
+			        CALCULATETABLE(
+			            VALUES(DimDate[YearMonth]),
+			            ALLSELECTED(DimDate)
+			        ),
+			        "'" & DimDate[YearMonth] & "'",
+			        ",",
+			        DimDate[YearMonth], ASC
+			    )
+			
+			RETURN
+			
+			"<style>" &
+			"*{box-sizing:border-box;margin:0;padding:0}" &
+			"body{font-family:'Segoe UI',sans-serif;background:#F6F7F9;padding:24px 28px}" &
+			".top-bar{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid #E5E7EB}" &
+			".kpi-row{display:flex;gap:28px}" &
+			".kpi{display:flex;flex-direction:column;gap:2px}" &
+			".kpi-label{font-size:10px;color:#9CA3AF;letter-spacing:0.08em;text-transform:uppercase}" &
+			".kpi-val{font-size:24px;font-weight:300;color:#1F2937;letter-spacing:-0.03em}" &
+			".kpi-delta{font-size:11px;font-weight:500}" &
+			".kpi-sub{font-size:10px;color:#9CA3AF;margin-top:1px}" &
+			".sep{width:1px;background:#E5E7EB;height:38px;align-self:flex-end}" &
+			".period-tag{font-size:10px;color:#B0B8C4;letter-spacing:0.06em;text-transform:uppercase;text-align:right;line-height:1.8}" &
+			".chart-wrap{position:relative;width:100%;height:310px}" &
+			".legend-row{display:flex;gap:20px;align-items:center;margin-top:12px;padding-top:10px;border-top:0.5px solid #E5E7EB}" &
+			".leg{display:flex;align-items:center;gap:7px;font-size:10px;color:#9CA3AF;letter-spacing:0.04em}" &
+			".leg-line{width:22px;height:1.5px;background:#2F9BC4}" &
+			".leg-diamond{width:8px;height:8px;background:#1F2937;transform:rotate(45deg)}" &
+			".leg-hint{margin-left:auto;font-size:10px;color:#D1D8E0;letter-spacing:0.03em}" &
+			".ann-panel{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}" &
+			".ann-card{background:#FFFFFF;border:0.5px solid #E9ECF0;border-top:2px solid #2F9BC4;padding:14px 16px 15px}" &
+			".ann-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}" &
+			".ann-name{font-size:12px;font-weight:600;color:#1F2937;line-height:1.35}" &
+			".ann-date{font-size:10px;color:#9CA3AF;letter-spacing:0.06em;white-space:nowrap;margin-left:8px;flex-shrink:0}" &
+			".ann-body{font-size:11px;color:#6B7280;line-height:1.68}" &
+			".ann-badge{display:inline-block;margin-top:9px;font-size:9px;font-weight:600;letter-spacing:0.09em;color:#185FA5;background:#EAF6FB;padding:2px 9px;text-transform:uppercase}" &
+			"</style>" &
+			
+			"<div class='top-bar'>" &
+			  "<div class='kpi-row'>" &
+			    "<div class='kpi'>" &
+			      "<span class='kpi-label'>Ventas acumuladas</span>" &
+			      "<span class='kpi-val'>S/ " & _fmt_acum & "</span>" &
+			      "<span class='kpi-delta' style='color:" & _color_var & "'>" & _sign & _fmt_var & " vs período ant.</span>" &
+			    "</div>" &
+			    "<div class='sep'></div>" &
+			    "<div class='kpi'>" &
+			      "<span class='kpi-label'>Pico de ventas</span>" &
+			      "<span class='kpi-val'>Nov 2022</span>" &
+			      "<span class='kpi-sub'>Copa del Mundo Qatar</span>" &
+			    "</div>" &
+			    "<div class='sep'></div>" &
+			    "<div class='kpi'>" &
+			      "<span class='kpi-label'>Eventos identificados</span>" &
+			      "<span class='kpi-val'>5</span>" &
+			      "<span class='kpi-sub'>Eventos de fútbol global</span>" &
+			    "</div>" &
+			  "</div>" &
+			  "<div class='period-tag'>Enero 2021 – Setiembre 2023</div>" &
+			"</div>" &
+			
+			"<div class='chart-wrap'>" &
+			  "<canvas id='sc' role='img' aria-label='Ventas mensuales con eventos de fútbol marcados.'>" &
+			    "Gráfico de ventas con hitos de fútbol global." &
+			  "</canvas>" &
+			"</div>" &
+			
+			"<div class='legend-row'>" &
+			  "<div class='leg'><div class='leg-line'></div>Ventas mensuales</div>" &
+			  "<div class='leg'><div class='leg-diamond'></div>Evento de fútbol global</div>" &
+			  "<span class='leg-hint'>Etiquetas de evento visibles sobre el gráfico</span>" &
+			"</div>" &
+			
+			"<div class='ann-panel' id='annPanel'></div>" &
+			
+			"<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js'></script>" &
+			"<script>" &
+			
+			"var labels=[" & _labels_array & "];" &
+			"var sales=[" & _sales_array & "];" &
+			
+			"var events={" &
+			  "5:{short:'Copa América 2021',date:'Jun 2021',name:'Copa América — Brasil 2021',desc:'Torneo continental disputado en Brasil. Argentina campeón por primera vez en 28 años liderado por Messi. +500M espectadores acumulados en TV y plataformas digitales a nivel global.',badge:'CONMEBOL · Copa América'}," &
+			  "6:{short:'Final Copa América',date:'Jul 2021',name:'Final Copa América 2021',desc:'Argentina venció a Brasil 1-0 en el Maracaná. Primer título mayor de Messi con la selección. Pico máximo de audiencia en Latinoamérica y récord de consumo en categorías deportivas.',badge:'CONMEBOL · Final'}," &
+			  "17:{short:'Final Champions 22',date:'Jun 2022',name:'Final UEFA Champions League — París 2022',desc:'Real Madrid derrotó al Liverpool 1-0 en el Stade de France con gol de Vinicius Jr. Más de 450M espectadores globales e impacto directo en demanda de productos deportivos premium.',badge:'UEFA Champions League'}," &
+			  "22:{short:'Copa del Mundo Qatar',date:'Nov 2022',name:'Copa del Mundo — Qatar 2022',desc:'Primer mundial en territorio árabe y el de mayor audiencia en la historia: +5.000M espectadores acumulados. Argentina campeón ante Francia 3-3 (4-2 pen.). Pico máximo de ventas del período.',badge:'FIFA World Cup'}," &
+			  "29:{short:'Final Champions 23',date:'Jun 2023',name:'Final UEFA Champions League — Estambul 2023',desc:'Manchester City completó el triplete histórico al vencer al Inter de Milán 1-0. Más de 400M espectadores en directo. Alto impacto en el segmento deportivo premium a nivel global.',badge:'UEFA Champions League'}" &
+			"};" &
+			
+			"var evIdxs=Object.keys(events).map(Number);" &
+			
+			"var annPlugin={id:'annPlugin',afterDraw:function(chart){" &
+			  "var ctx=chart.ctx,x=chart.scales.x,y=chart.scales.y,top=chart.chartArea.top,bottom=chart.chartArea.bottom;" &
+			  "evIdxs.forEach(function(i){" &
+			    "var xp=x.getPixelForValue(i);" &
+			    "ctx.save();" &
+			    "ctx.beginPath();ctx.setLineDash([2,5]);ctx.strokeStyle='rgba(47,155,196,0.22)';ctx.lineWidth=1;" &
+			    "ctx.moveTo(xp,top+26);ctx.lineTo(xp,bottom);ctx.stroke();ctx.setLineDash([]);" &
+			    "var txt=events[i].short;" &
+			    "ctx.font='600 9px Segoe UI,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';" &
+			    "var tw=ctx.measureText(txt).width,bx=xp-tw/2-7,by=top+4,bw=tw+14,bh=17;" &
+			    "ctx.fillStyle='#EAF6FB';ctx.fillRect(bx,by,bw,bh);" &
+			    "ctx.strokeStyle='#2F9BC4';ctx.lineWidth=0.5;ctx.strokeRect(bx,by,bw,bh);" &
+			    "ctx.beginPath();ctx.moveTo(bx,by);ctx.lineTo(bx+bw,by);ctx.strokeStyle='#2F9BC4';ctx.lineWidth=1.5;ctx.stroke();" &
+			    "ctx.fillStyle='#185FA5';ctx.fillText(txt,xp,by+bh/2);" &
+			    "ctx.restore();" &
+			  "});" &
+			"}};" &
+			
+			"new Chart(document.getElementById('sc'),{" &
+			  "type:'line'," &
+			  "data:{labels:labels,datasets:[" &
+			    "{label:'Ventas',data:sales,borderColor:'#2F9BC4',borderWidth:1.8,backgroundColor:'rgba(47,155,196,0.04)',fill:true,tension:0.38," &
+			     "pointRadius:sales.map(function(_,i){return evIdxs.includes(i)?0:2;}),pointBackgroundColor:'#2F9BC4',pointBorderColor:'#2F9BC4',pointBorderWidth:0,pointHoverRadius:6}," &
+			    "{label:'Evento',data:sales.map(function(v,i){return evIdxs.includes(i)?v:null;}),borderColor:'transparent',backgroundColor:'transparent'," &
+			     "pointRadius:10,pointHoverRadius:12,pointBackgroundColor:'#FFFFFF',pointBorderColor:'#1F2937',pointBorderWidth:1.5,pointStyle:'rectRot',showLine:false}" &
+			  "]}," &
+			  "options:{responsive:true,maintainAspectRatio:false,layout:{padding:{top:32,right:6,bottom:0,left:4}}," &
+			    "plugins:{legend:{display:false}," &
+			      "tooltip:{backgroundColor:'#1F2937',titleColor:'#F9FAFB',bodyColor:'#9CA3AF'," &
+			        "titleFont:{family:'Segoe UI',size:11,weight:'600'},bodyFont:{family:'Segoe UI',size:11}," &
+			        "padding:12,borderColor:'#374151',borderWidth:0.5,displayColors:false," &
+			        "filter:function(item){return item.datasetIndex===0;}," &
+			        "callbacks:{" &
+			          "title:function(ctx){return labels[ctx[0].dataIndex];}," &
+			          "label:function(ctx){var v=Math.round(ctx.parsed.y).toLocaleString('es-PE');var ev=events[ctx.dataIndex];if(ev){return['Ventas: S/ '+v,'Evento: '+ev.name];}return 'Ventas: S/ '+v;}" &
+			        "}" &
+			      "}" &
+			    "}," &
+			    "scales:{" &
+			      "x:{grid:{color:'rgba(229,231,235,0.45)',drawBorder:false},ticks:{font:{family:'Segoe UI',size:10},color:'#B0B8C4',maxRotation:0,autoSkip:true,maxTicksLimit:12},border:{display:false}}," &
+			      "y:{display:true,grid:{color:'rgba(229,231,235,0.45)',drawBorder:false},ticks:{display:false},border:{display:false},title:{display:false}}" &
+			    "}" &
+			  "}," &
+			  "plugins:[annPlugin]" &
+			"});" &
+			
+			"var panel=document.getElementById('annPanel');" &
+			"evIdxs.forEach(function(i){" &
+			  "var ev=events[i],c=document.createElement('div');" &
+			  "c.className='ann-card';" &
+			  "c.innerHTML='<div class=ann-head><div class=ann-name>'+ev.name+'</div><div class=ann-date>'+ev.date+'</div></div><div class=ann-body>'+ev.desc+'</div><div class=ann-badge>'+ev.badge+'</div>';" &
+			  "panel.appendChild(c);" &
+			"});" &
+			
+			"</script>"
+			
+			```
+		lineageTag: 2ca4cdde-0c3f-4828-8108-2bfcbc61c4c8
+
+	measure 'TML Football Events' =
+			
+			
+			VAR _ventas_acum = [Venta Neta]
+			VAR _variacion   = [VAR Ventas Netas PY]
+			VAR _fmt_acum    = FORMAT(_ventas_acum,"#,##0")
+			VAR _fmt_var     = FORMAT(ABS(_variacion), "0.00") & "%"
+			VAR _sign        = IF(_variacion >= 0, "+", "-")
+			VAR _color_var   = IF(_variacion >= 0, "#08C792", "#ED2939")
+			
+			VAR _sales_array =
+			    CONCATENATEX(
+			        CALCULATETABLE(
+			            ADDCOLUMNS(
+			                VALUES(DimDate[YearMonth]),
+			                "_v", [Venta Neta]
+			            ),
+			            ALLSELECTED(DimDate)
+			        ),
+			        [_v],
+			        ",",
+			        DimDate[YearMonth],
+			        ASC
+			    )
+			
+			VAR _labels_array =
+			    CONCATENATEX(
+			        CALCULATETABLE(
+			            VALUES(DimDate[YearMonth]),
+			            ALLSELECTED(DimDate)
+			        ),
+			        "'" & DimDate[YearMonth] & "'",
+			        ",",
+			        DimDate[YearMonth],
+			        ASC
+			    )
+			
+			RETURN
+			
+			"<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'>" &
+			"<style>" &
+			"*{box-sizing:border-box;margin:0;padding:0}" &
+			"html,body{width:1069px;height:577px;overflow:hidden;font-family:'Segoe UI',sans-serif;background:#F6F7F9}" &
+			".hdr{display:flex;align-items:flex-end;justify-content:space-between;padding:13px 24px 11px;border-bottom:1px solid #E5E7EB;background:#F6F7F9;height:72px}" &
+			".kpi-row{display:flex;gap:0}" &
+			".kpi{display:flex;flex-direction:column;gap:1px;padding:0 20px}" &
+			".kpi:first-child{padding-left:0}" &
+			".kpi+.kpi{border-left:1px solid #E5E7EB}" &
+			".kl{font-size:9px;color:#9CA3AF;letter-spacing:0.09em;text-transform:uppercase}" &
+			".kv{font-size:21px;font-weight:300;color:#1F2937;letter-spacing:-0.02em;line-height:1.2}" &
+			".kd{font-size:10px;font-weight:600;margin-top:1px}" &
+			".ks{font-size:9px;color:#9CA3AF}" &
+			".pt{font-size:9px;color:#B0B8C4;letter-spacing:0.07em;text-transform:uppercase;text-align:right;line-height:1.9}" &
+			".ca{position:relative;width:1069px;height:468px}" &
+			"canvas{position:absolute;top:0;left:0}" &
+			".ft{display:flex;gap:18px;align-items:center;padding:6px 24px;border-top:0.5px solid #E5E7EB;height:37px}" &
+			".lg{display:flex;align-items:center;gap:6px;font-size:9px;color:#9CA3AF;letter-spacing:0.04em}" &
+			".ll{width:20px;height:1.5px;background:#2F9BC4}" &
+			".lc{width:7px;height:7px;border-radius:50%;border:1px solid #1F2937;background:#fff}" &
+			".tt{position:absolute;pointer-events:none;opacity:0;transition:opacity 0.15s;background:#1F2937;border:0.5px solid #374151;padding:10px 13px;width:224px;z-index:50}" &
+			".tt.show{opacity:1}" &
+			".tt-dt{font-size:9px;color:#6B7280;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:3px}" &
+			".tt-nm{font-size:11px;font-weight:600;color:#F9FAFB;line-height:1.35;margin-bottom:5px}" &
+			".tt-ds{font-size:10px;color:#9CA3AF;line-height:1.58}" &
+			".tt-sl{font-size:10px;color:#48B8DE;margin-top:6px;font-weight:500}" &
+			".tt-bg{display:inline-block;margin-top:6px;font-size:8px;font-weight:700;letter-spacing:0.09em;color:#185FA5;background:#EAF6FB;padding:2px 7px;text-transform:uppercase}" &
+			"</style></head><body>" &
+			
+			"<div class='hdr'>" &
+			  "<div class='kpi-row'>" &
+			    "<div class='kpi'><span class='kl'>Ventas acumuladas</span><span class='kv'>USD " & _fmt_acum & "</span><span class='kd' style='color:" & _color_var & "'>" & _sign & _fmt_var & " vs período ant.</span></div>" &
+			    "<div class='kpi'><span class='kl'>Pico identificado</span><span class='kv'>Ago 2025</span><span class='ks'>League Start New Kits</span></div>" &
+			    "<div class='kpi'><span class='kl'>Categorías de eventos</span><span class='kv'>29</span><span class='ks'>2021 – 2025</span></div>" &
+			  "</div>" &
+			  "<div class='pt'>Enero 2021 – Diciembre 2025</div>" &
+			"</div>" &
+			
+			"<div class='ca'>" &
+			  "<canvas id='sc' width='1069' height='468' aria-label='Ventas Netas con eventos de fútbol 2021-2025'></canvas>" &
+			  "<div class='tt' id='tt'><div class='tt-dt' id='tt-d'></div><div class='tt-nm' id='tt-n'></div><div class='tt-ds' id='tt-s'></div><div class='tt-sl' id='tt-v'></div><div class='tt-bg' id='tt-b'></div></div>" &
+			"</div>" &
+			
+			"<div class='ft'>" &
+			  "<div class='lg'><div class='ll'></div>Ventas Netas mensuales</div>" &
+			  "<div class='lg'><div class='lc'></div>Evento comercial — pasa el cursor sobre el marcador</div>" &
+			"</div>" &
+			
+			"<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js'></script>" &
+			"<script>(function(){" &
+			
+			"var LB=[" & _labels_array & "];" &
+			"var SL=[" & _sales_array & "];" &
+			
+			"var EV={" &
+			"4:{s:'Finals & Trophies',d:'May 2021',n:'Finals and Trophies — May 2021',t:'Cierre de temporada con finales de grandes ligas y entrega de trofeos. Pico de demanda en camisetas de equipos campeones y colecciones conmemorativas.',b:'FINALS & TROPHIES'}," &
+			"7:{s:'League Start',d:'Ago 2021',n:'League Start & New Kits — Ago 2021',t:'Inicio de temporada 2021-22. Lanzamiento de nuevas equipaciones oficiales. Alta rotación de producto en categoría jerseys y kits infantiles.',b:'LEAGUE START · NEW KITS'}," &
+			"8:{s:'New Kits',d:'Sep 2021',n:'New Kits — Sep 2021',t:'Segunda ola de lanzamientos de kits. Equipos de primera división presentan uniformes alternos. Demanda sostenida en el canal digital.',b:'LEAGUE START · NEW KITS'}," &
+			"10:{s:'Holiday',d:'Nov 2021',n:'Holiday & Gifting — Nov 2021',t:'Inicio de temporada navideña. Campañas de regalo deportivo. Los jerseys y kits se posicionan como el regalo preferido en categoría deporte.',b:'HOLIDAY & GIFTING'}," &
+			"11:{s:'Gifting',d:'Dic 2021',n:'Holiday & Gifting — Dic 2021',t:'Pico de ventas navideñas. Mayor volumen de pedidos de regalo en indumentaria deportiva. Efecto Black Friday extendido hacia Navidad.',b:'HOLIDAY & GIFTING'}," &
+			"16:{s:'Finals & Trophies',d:'May 2022',n:'Finals and Trophies — May 2022',t:'Finales de temporada 2022. Grandes definiciones en Champions League y ligas top. Demanda concentrada en jerseys de equipos finalistas.',b:'FINALS & TROPHIES'}," &
+			"17:{s:'Global Cup',d:'Jun 2022',n:'Global Cup 2022 — Fase de Grupos',t:'Inicio del ciclo Global Cup 2022. Expectativa máxima en mercados LATAM y Europa. Ventas de indumentaria de selecciones nacionales en alza.',b:'GLOBAL CUP 2022'}," &
+			"18:{s:'Global Cup Final',d:'Jul 2022',n:'Global Cup 2022 — Etapa Final',t:'Etapa decisiva del Global Cup 2022. Pico de audiencia y demanda de producto oficial. Alta correlación con ventas de camisetas de selecciones finalistas.',b:'GLOBAL CUP 2022'}," &
+			"19:{s:'League Start',d:'Ago 2022',n:'League Start & New Kits — Ago 2022',t:'Arranque de temporada 2022-23. Nuevas equipaciones de los grandes clubes europeos. Récord de pre-ventas en categoría kits.',b:'LEAGUE START · NEW KITS'}," &
+			"20:{s:'New Kits',d:'Sep 2022',n:'New Kits — Sep 2022',t:'Lanzamientos complementarios de kits. Alta demanda en mercados donde el fútbol vive su temporada alta.',b:'LEAGUE START · NEW KITS'}," &
+			"22:{s:'Holiday',d:'Nov 2022',n:'Holiday & Gifting — Nov 2022',t:'Temporada de regalos con efecto multiplicador del Global Cup. Doble impacto en ventas: navidad + torneo internacional en curso.',b:'HOLIDAY & GIFTING'}," &
+			"23:{s:'Gifting',d:'Dic 2022',n:'Holiday & Gifting — Dic 2022',t:'Cierre del año con el mayor volumen de ventas del período. Efecto post-torneo sostenido más campaña navideña. Pico histórico de la categoría.',b:'HOLIDAY & GIFTING'}," &
+			"28:{s:'Finals & Trophies',d:'May 2023',n:'Finals and Trophies — May 2023',t:'Finales de temporada 2022-23. Grandes definiciones en Champions League y ligas top. Demanda concentrada en jerseys de equipos finalistas.',b:'FINALS & TROPHIES'}," &
+			"31:{s:'League Start',d:'Ago 2023',n:'League Start & New Kits — Ago 2023',t:'Inicio de temporada 2023-24. Fichajes estrella generan expectativa en nuevas camisetas. Lanzamientos más anticipados de los últimos años.',b:'LEAGUE START · NEW KITS'}," &
+			"32:{s:'New Kits',d:'Sep 2023',n:'New Kits — Sep 2023',t:'Segunda oleada de kits de temporada. Fuerte activación digital y en punto de venta. Alta conversión en segmento juvenil.',b:'LEAGUE START · NEW KITS'}," &
+			"34:{s:'Holiday',d:'Nov 2023',n:'Holiday & Gifting — Nov 2023',t:'Pre-campaña navideña con catálogo renovado. Los kits de la nueva temporada son el producto estrella de la temporada de regalos.',b:'HOLIDAY & GIFTING'}," &
+			"35:{s:'Gifting',d:'Dic 2023',n:'Holiday & Gifting — Dic 2023',t:'Pico navideño 2023. Crecimiento sostenido respecto al año anterior. La indumentaria deportiva consolida su lugar como categoría líder en regalos.',b:'HOLIDAY & GIFTING'}," &
+			"40:{s:'Finals & Trophies',d:'May 2024',n:'Finals and Trophies — May 2024',t:'Finales de la temporada 2023-24. Champions League y ligas europeas con alta audiencia. Ventas de jerseys de campeones con pico post-final.',b:'FINALS & TROPHIES'}," &
+			"41:{s:'Cont. Championship',d:'Jun 2024',n:'Continental Championship 2024 — Fase Inicial',t:'Inicio del Continental Championship 2024. Doble impacto con cierre de temporada. Alta demanda de camisetas de selecciones participantes en LATAM y Europa.',b:'CONTINENTAL CHAMP.'}," &
+			"42:{s:'Cont. Champ. Final',d:'Jul 2024',n:'Continental Championship 2024 — Etapa Final',t:'Definición del Continental Championship 2024. Pico máximo de audiencia del torneo. Ventas de indumentaria de selecciones finalistas en máximos del año.',b:'CONTINENTAL CHAMP.'}," &
+			"43:{s:'League Start',d:'Ago 2024',n:'League Start & New Kits — Ago 2024',t:'Arranque de temporada 2024-25. Nuevas equipaciones con alta inversión en diseño. Pre-ventas digitales superan registros anteriores.',b:'LEAGUE START · NEW KITS'}," &
+			"44:{s:'New Kits',d:'Sep 2024',n:'New Kits — Sep 2024',t:'Lanzamientos de kits alternos y terceras equipaciones. Fuerte presencia en canales digitales y activaciones en tienda.',b:'LEAGUE START · NEW KITS'}," &
+			"46:{s:'Holiday',d:'Nov 2024',n:'Holiday & Gifting — Nov 2024',t:'Temporada de regalos 2024. Campañas integradas on/off. Los kits de temporada y colecciones especiales navideñas lideran el mix de ventas.',b:'HOLIDAY & GIFTING'}," &
+			"47:{s:'Gifting',d:'Dic 2024',n:'Holiday & Gifting — Dic 2024',t:'Cierre del año con fuerte performance en categoría indumentaria. Efecto acumulado del Continental Championship sostenido hacia la temporada navideña.',b:'HOLIDAY & GIFTING'}," &
+			"52:{s:'Finals & Trophies',d:'May 2025',n:'Finals and Trophies — May 2025',t:'Finales de temporada 2024-25. Alta expectativa con definiciones en Champions League. Ventas de producto oficial en máximos de la ventana de playoffs.',b:'FINALS & TROPHIES'}," &
+			"55:{s:'League Start',d:'Ago 2025',n:'League Start & New Kits — Ago 2025',t:'Inicio de temporada 2025-26. Ambiente de antesala al Mundial 2026. Los lanzamientos de kits incorporan elementos alusivos al torneo próximo.',b:'LEAGUE START · NEW KITS'}," &
+			"56:{s:'New Kits',d:'Sep 2025',n:'New Kits — Sep 2025',t:'Segunda ola de equipaciones 2025-26. Fuerte tracción en mercados de EE.UU., México y Canadá de cara al Mundial 2026.',b:'LEAGUE START · NEW KITS'}," &
+			"58:{s:'Holiday',d:'Nov 2025',n:'Holiday & Gifting — Nov 2025',t:'Temporada navideña 2025 con efecto anticipatorio del Mundial 2026. Demanda de indumentaria de selecciones nacionales en aumento sostenido.',b:'HOLIDAY & GIFTING'}," &
+			"59:{s:'Gifting',d:'Dic 2025',n:'Holiday & Gifting — Dic 2025',t:'Cierre del período analizado. Pico navideño 2025 con fuerte componente de selecciones nacionales. El mercado anticipa el Mundial 2026 en EE.UU., México y Canadá.',b:'HOLIDAY & GIFTING'}" &
+			"};" &
+			
+			"var EI=Object.keys(EV).map(Number);" &
+			
+			"var AP={id:'ap',afterDraw:function(C){" &
+			"var ctx=C.ctx,X=C.scales.x,Y=C.scales.y;" &
+			"var T=C.chartArea.top,L=C.chartArea.left,R=C.chartArea.right;" &
+			"var its=[];" &
+			"EI.forEach(function(i){" &
+			"if(i>=LB.length)return;" &
+			"ctx.font='500 8px Segoe UI,sans-serif';" &
+			"var tx=EV[i].s,tw=ctx.measureText(tx).width+12;" &
+			"its.push({i:i,xp:X.getPixelForValue(i),yp:Y.getPixelForValue(SL[i]||0),tx:tx,tw:tw});" &
+			"});" &
+			"var BH=13,GP=2,pl=[];" &
+			"its.forEach(function(p){" &
+			"var bw=p.tw,bx=p.xp-bw/2;" &
+			"if(bx<L+1)bx=L+1;" &
+			"if(bx+bw>R-1)bx=R-1-bw;" &
+			"var rw=0,ok=false;" &
+			"while(!ok&&rw<5){ok=true;" &
+			"for(var k=0;k<pl.length;k++){var q=pl[k];if(q.rw===rw&&bx<q.bx+q.bw+5&&bx+bw>q.bx){ok=false;break;}}" &
+			"if(!ok)rw++;}" &
+			"var by=T+2+rw*(BH+GP);" &
+			"pl.push({bx:bx,bw:bw,rw:rw});" &
+			"ctx.save();" &
+			"ctx.beginPath();ctx.setLineDash([1,4]);ctx.strokeStyle='rgba(47,155,196,0.16)';ctx.lineWidth=0.7;" &
+			"ctx.moveTo(p.xp,by+BH);ctx.lineTo(p.xp,p.yp-7);ctx.stroke();ctx.setLineDash([]);" &
+			"ctx.fillStyle='#FFFFFF';ctx.strokeStyle='#D1D9E0';ctx.lineWidth=0.5;" &
+			"ctx.beginPath();ctx.rect(bx,by,bw,BH);ctx.fill();ctx.stroke();" &
+			"ctx.beginPath();ctx.moveTo(bx,by);ctx.lineTo(bx+bw,by);ctx.strokeStyle='#2F9BC4';ctx.lineWidth=1.2;ctx.stroke();" &
+			"ctx.fillStyle='#374151';ctx.font='500 8px Segoe UI,sans-serif';ctx.textAlign='center';ctx.textBaseline='middle';" &
+			"ctx.fillText(p.tx,bx+bw/2,by+BH/2);" &
+			"ctx.restore();" &
+			"});" &
+			"}};" &
+			
+			"function build(){" &
+			"var cv=document.getElementById('sc');" &
+			"if(!cv||typeof Chart==='undefined')return;" &
+			"if(cv._ch){cv._ch.destroy();}" &
+			"var ED=SL.map(function(v,i){return EI.indexOf(i)>=0?v:null;});" &
+			"var g=cv.getContext('2d').createLinearGradient(0,0,0,468);" &
+			"g.addColorStop(0,'rgba(47,155,196,0.11)');g.addColorStop(0.65,'rgba(47,155,196,0.02)');g.addColorStop(1,'rgba(47,155,196,0)');" &
+			"cv._ch=new Chart(cv,{type:'line'," &
+			"data:{labels:LB,datasets:[" &
+			"{label:'Ventas',data:SL,borderColor:'#2F9BC4',borderWidth:1.7,backgroundColor:g,fill:true,tension:0.40," &
+			"pointRadius:SL.map(function(_,i){return EI.indexOf(i)>=0?0:1.5;}),pointBackgroundColor:'#2F9BC4',pointBorderColor:'#2F9BC4',pointBorderWidth:0,pointHoverRadius:3,order:2}," &
+			"{label:'Ev',data:ED,type:'line',showLine:false," &
+			"pointRadius:6,pointHoverRadius:8," &
+			"pointBackgroundColor:'#FFFFFF'," &
+			"pointBorderColor:'#1F2937'," &
+			"pointBorderWidth:1.2," &
+			"pointStyle:'circle',order:1}" &
+			"]}," &
+			"options:{responsive:false,maintainAspectRatio:false,animation:{duration:400}," &
+			"layout:{padding:{top:52,right:16,bottom:18,left:8}}," &
+			"plugins:{legend:{display:false},tooltip:{enabled:false}}," &
+			"scales:{" &
+			"x:{grid:{color:'rgba(229,231,235,0.35)',drawBorder:false}," &
+			"ticks:{font:{family:'Segoe UI',size:9},color:'#B0B8C4',maxRotation:0,autoSkip:true,maxTicksLimit:16},border:{display:false}}," &
+			"y:{grid:{color:'rgba(229,231,235,0.35)',drawBorder:false},ticks:{display:false},border:{display:false}}" &
+			"}}," &
+			"plugins:[AP]});" &
+			
+			"var tt=document.getElementById('tt');" &
+			"cv.onmousemove=function(e){" &
+			"var pts=cv._ch.getElementsAtEventForMode(e,'nearest',{intersect:true},false);" &
+			"if(!pts.length){tt.classList.remove('show');return;}" &
+			"var idx=pts[0].index,ds=pts[0].datasetIndex,ev=EV[idx];" &
+			"if(ds===1&&ev){" &
+			"document.getElementById('tt-d').textContent=ev.d;" &
+			"document.getElementById('tt-n').textContent=ev.n;" &
+			"document.getElementById('tt-s').textContent=ev.t;" &
+			"document.getElementById('tt-v').textContent='Ventas ese mes: S/ '+(SL[idx]||0).toLocaleString('es-PE');" &
+			"document.getElementById('tt-b').textContent=ev.b;" &
+			"tt.classList.add('show');" &
+			"var r=cv.getBoundingClientRect(),px=e.clientX-r.left,py=e.clientY-r.top;" &
+			"var lx=px+14;if(lx+228>1055)lx=px-238;" &
+			"var ly=py-18;if(ly+175>455)ly=py-175;if(ly<4)ly=4;" &
+			"tt.style.left=lx+'px';tt.style.top=ly+'px';" &
+			"}else tt.classList.remove('show');" &
+			"};" &
+			"cv.onmouseleave=function(){tt.classList.remove('show');};" &
+			"}" &
+			
+			"function try_build(){" &
+			"if(typeof Chart!=='undefined'&&document.getElementById('sc')){build();}" &
+			"else{setTimeout(try_build,150);}" &
+			"}" &
+			
+			"if(document.readyState==='loading'){" &
+			"document.addEventListener('DOMContentLoaded',function(){setTimeout(try_build,50);});" &
+			"}else{" &
+			"setTimeout(try_build,50);" &
+			"}" &
+			
+			"document.addEventListener('visibilitychange',function(){" &
+			"if(document.visibilityState==='visible')setTimeout(build,100);" &
+			"});" &
+			
+			"})();</script></body></html>"
+		lineageTag: f5df9f43-d07d-471c-b472-23295d347e4b
+
+	measure Sessiones = SUM(FactTraffic[Sessions])
+		formatString: 0
+		lineageTag: dbe71fa8-1295-461a-814d-ce4320ce6a79
+
+	measure AddToChat = SUM(FactTraffic[AddToCart])
+		formatString: #,0
+		lineageTag: 4367ad7a-8351-4f29-9ca8-870a9bf9a765
+
+	measure Conversiones = SUM(FactTraffic[Conversions])
+		formatString: #,0
+		lineageTag: 7f751dec-2917-475f-8480-0d29f63b04a8
+
+	measure %Rate = DIVIDE([Conversiones],[Sessiones])
+		formatString: 0\ %;-0\ %;0\ %
+		lineageTag: 1d0539df-597e-4d2c-8787-5011b935bcf5
+
+	measure TotalOrdener = DISTINCTCOUNT(FactSales[OrderID])
+		lineageTag: 90acf6c1-8680-4b1e-bc84-b6a8f7d55bff
+
+		formatStringDefinition =
+				VAR _ValorActual =
+				    SELECTEDMEASURE()
+				VAR _NumeroFormato =
+				    SWITCH (
+				        TRUE (),
+				        _ValorActual <= 1E3, "#,0.",
+				        _ValorActual <= 1E4, "#,0,.00 K",
+				        _ValorActual <= 1E5, "#,0,.0 K",
+				        _ValorActual <= 1E6, "#,0,. K",
+				        _ValorActual <= 1E7, "#,0,,.00 M",
+				        _ValorActual <= 1E8, "#,0,,.0 M",
+				        _ValorActual <= 1E9, "#,0,,. M"
+				    )
+				RETURN
+				    _NumeroFormato
+
+	measure TotalCustomer = DISTINCTCOUNT(FactSales[CustomerKey])
+		lineageTag: cf984ac4-efcd-4fcb-bc47-58db12f273f9
+
+		formatStringDefinition =
+				VAR _ValorActual =
+				    SELECTEDMEASURE()
+				VAR _NumeroFormato =
+				    SWITCH (
+				        TRUE (),
+				        _ValorActual <= 1E3, "#,0.",
+				        _ValorActual <= 1E4, "#,0,.00 K",
+				        _ValorActual <= 1E5, "#,0,.0 K",
+				        _ValorActual <= 1E6, "#,0,. K",
+				        _ValorActual <= 1E7, "#,0,,.00 M",
+				        _ValorActual <= 1E8, "#,0,,.0 M",
+				        _ValorActual <= 1E9, "#,0,,. M"
+				    )
+				RETURN
+				    _NumeroFormato
+
+	measure 'Ticket Promedio' =
+			
+			DIVIDE(
+			    [Venta Neta],
+			    DISTINCTCOUNT(FactSales[OrderID])
+			)
+		lineageTag: 7c766af0-09b1-482f-96ca-fa05a44adbe6
+
+		formatStringDefinition =
+				VAR _ValorActual =
+				    SELECTEDMEASURE()
+				VAR _NumeroFormato =
+				    SWITCH (
+				        TRUE (),
+				        _ValorActual <= 1E3, "#,0.",
+				        _ValorActual <= 1E4, "#,0,.00 K",
+				        _ValorActual <= 1E5, "#,0,.0 K",
+				        _ValorActual <= 1E6, "#,0,. K",
+				        _ValorActual <= 1E7, "#,0,,.00 M",
+				        _ValorActual <= 1E8, "#,0,,.0 M",
+				        _ValorActual <= 1E9, "#,0,,. M"
+				    )
+				RETURN
+				    _NumeroFormato
+
+	measure simboloes = " ↗;↘ or ↑;↓ and ▲;▼ "
+		lineageTag: 3e926e46-60d5-4368-9a65-5bd838c478a5
+
+	measure Costo = SUMX(FactSales,FactSales[Quantity]*FactSales[UnitCost])
+		lineageTag: 2ff10342-e555-448c-b68e-8dbacfb85b38
+
+		formatStringDefinition =
+				VAR _ValorActual =
+				    SELECTEDMEASURE()
+				VAR _NumeroFormato =
+				    SWITCH (
+				        TRUE (),
+				        _ValorActual <= 1E3, "#,0.",
+				        _ValorActual <= 1E4, "#,0,.00 K",
+				        _ValorActual <= 1E5, "#,0,.0 K",
+				        _ValorActual <= 1E6, "#,0,. K",
+				        _ValorActual <= 1E7, "#,0,,.00 M",
+				        _ValorActual <= 1E8, "#,0,,.0 M",
+				        _ValorActual <= 1E9, "#,0,,. M"
+				    )
+				RETURN
+				    _NumeroFormato
+
+	measure descuento = sum(FactSales[DiscountAmount])
+		formatString: 0
+		lineageTag: 704403c1-5fb0-4c9f-9c88-98061d6b4500
+
+	measure 'Venta Neta AA' =
+			
+			VAR Inicio_ =   20250101
+			VAR Final_ = 20251231
+			VAR result =
+			CALCULATE ( [Venta Neta] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		lineageTag: 7f7d6b6b-f850-4642-a043-f3d5957b99a2
+
+		formatStringDefinition =
+				VAR _ValorActual =
+				    SELECTEDMEASURE()
+				VAR _NumeroFormato =
+				    SWITCH (
+				        TRUE (),
+				        _ValorActual <= 1E3, "#,0.",
+				        _ValorActual <= 1E4, "#,0,.00 K",
+				        _ValorActual <= 1E5, "#,0,.0 K",
+				        _ValorActual <= 1E6, "#,0,. K",
+				        _ValorActual <= 1E7, "#,0,,.00 M",
+				        _ValorActual <= 1E8, "#,0,,.0 M",
+				        _ValorActual <= 1E9, "#,0,,. M"
+				    )
+				RETURN
+				    _NumeroFormato
+
+	measure UtilidadAA =
+			
+			VAR Inicio_ =   20250101
+			VAR Final_ = 20251231
+			VAR result =
+			CALCULATE ( [Utilidad] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		lineageTag: bcc3387c-8d43-4ecc-aa53-dc767f444f28
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure UtilidadPY =
+			
+			VAR Inicio_ =   20240101
+			VAR Final_ = 20241231
+			VAR result =
+			CALCULATE ( [Utilidad] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		lineageTag: 5e7fef6b-3be5-494b-b1e6-6b711570f49b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Leyenda_HTML_Horizontal =
+			
+			"
+			<div style='font-family:Segoe UI; font-size:9px; color:#333; display:flex; align-items:center; gap:16px;'>
+			  <strong style='margin-right:4px;'>Leyenda:</strong>
+			  <div style='display:flex; align-items:center; gap:6px;'>
+			    <div style='width:16px; height:16px; background-color:#48B8DE; border-radius:2px;'></div>
+			    <span>Ventas Netas</span>
+			  </div>
+			  <div style='display:flex; align-items:center; gap:6px;'>
+			    <div style='width:16px; height:16px; background-color:#d4dae0; border-radius:2px;'></div>
+			    <span>Ventas Netas (1MA)</span>
+			  </div>
+			</div>
+			"
+		lineageTag: 71d90121-5db9-48d6-a69c-0efd978a940e
+
+	measure Html_Resumen =
+			
+			"<!DOCTYPE html><html lang='es'><head><meta charset='UTF-8'>" &
+			"<style>" &
+			"*{box-sizing:border-box;margin:0;padding:0}" &
+			"html,body{width:1060px;height:173px;overflow:hidden;font-family:'Segoe UI',sans-serif;background:#F6F7F9;color:#1F2937}" &
+			".wrap{display:grid;grid-template-columns:auto 1px 1fr 1px 1fr 1px 1fr;height:173px;align-items:stretch}" &
+			".col{padding:14px 18px;display:flex;flex-direction:column;justify-content:center;gap:5px}" &
+			".div{background:#E5E7EB;width:1px;margin:14px 0}" &
+			".label{font-size:8px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#9CA3AF;margin-bottom:2px}" &
+			".title-block{padding:14px 20px 14px 18px;display:flex;flex-direction:column;justify-content:center;gap:3px;min-width:170px}" &
+			".title{font-size:12px;font-weight:600;color:#1F2937}" &
+			".period{font-size:9px;color:#9CA3AF}" &
+			".badge{margin-top:6px;font-size:8px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px;background:#EAF6FB;color:#185FA5;display:inline-block;width:fit-content}" &
+			".body{font-size:10.5px;color:#374151;line-height:1.7}" &
+			".hl{font-weight:600;color:#1F2937}" &
+			".ac{color:#2F9BC4;font-weight:600}" &
+			".up{color:#08C792;font-weight:600}" &
+			".dn{color:#ED2939;font-weight:600}" &
+			"</style></head><body>" &
+			"<div class='wrap'>" &
+			
+			"<div class='title-block'>" &
+			"<div class='title'>Ranking Ejecutivo</div>" &
+			"<div class='period'>Ventas Netas 2025</div>" &
+			"<div class='badge'>Dirección General</div>" &
+			"</div>" &
+			
+			"<div class='div'></div>" &
+			
+			"<div class='col'>" &
+			"<div class='label'>Canales</div>" &
+			"<div class='body'><span class='hl'>Web</span> lidera volumen con <span class='ac'>S/ 1.33M</span> y <span class='ac'>52.9%</span> de margen. <span class='hl'>Mobile App</span> alcanza <span class='ac'>S/ 1.26M</span> con margen superior (<span class='ac'>53.2%</span>), evidenciando mayor eficiencia transaccional. Distribución equilibrada entre canales reduce riesgo de concentración.</div>" &
+			"</div>" &
+			
+			"<div class='div'></div>" &
+			
+			"<div class='col'>" &
+			"<div class='label'>Categorías</div>" &
+			"<div class='body'><span class='hl'>Kits</span> (<span class='ac'>S/ 1.02M</span>) y <span class='hl'>Footwear</span> (<span class='ac'>S/ 921k</span>) concentran el volumen. <span class='hl'>Collectibles</span> destaca con el mayor margen (<span class='up'>57.0%</span>) y potencial premium. <span class='hl'>Training Equipment</span> requiere revisión: margen más bajo del portafolio (<span class='dn'>48.6%</span>).</div>" &
+			"</div>" &
+			
+			"<div class='div'></div>" &
+			
+			"<div class='col'>" &
+			"<div class='label'>Mercados</div>" &
+			"<div class='body'><span class='hl'>EE.UU.</span> (<span class='up'>57.9%</span>), <span class='hl'>Japan</span> (<span class='up'>55.9%</span>) y <span class='hl'>UK</span> (<span class='ac'>53.7%</span>) lideran rentabilidad. <span class='hl'>Mexico</span> (<span class='dn'>47.4%</span>) y <span class='hl'>Australia</span> (<span class='dn'>48.7%</span>) operan bajo el umbral promedio y requieren intervención en precio o mix de producto.</div>" &
+			"</div>" &
+			
+			"</div>" &
+			"</body></html>"
+		lineageTag: 590bdb45-2c0f-451f-a54c-0703f41a27ba
+
+	measure 'HTML Titulo' =
+			
+			"<div style='width:1090px;height:86px;background:#ffffff;display:flex;align-items:center;justify-content:center;box-sizing:border-box;border:1px solid #d0d5dd;position:relative;overflow:hidden;'>
+			  <div style='position:absolute;left:0;top:0;width:5px;height:100%;background:#1a6fa8;'></div>
+			  <div style='position:absolute;right:0;top:0;width:5px;height:100%;background:#1a6fa8;'></div>
+			  <div style='display:flex;flex-direction:column;align-items:center;gap:4px;'>
+			    <div style='font-size:26px;font-weight:700;color:#1a2a3a;font-family:Segoe UI,sans-serif;'>Resumen de Ventas — Temporada 2025" & "</div>
+			    <div style='display:flex;align-items:center;gap:12px;'>
+			      <div style='width:60px;height:2px;background:#1a9e75;'></div>
+			      <div style='font-size:12px;color:#5a7a9a;letter-spacing:0.12em;text-transform:uppercase;font-family:Segoe UI,sans-serif;'>Global Football Retail · PitchSide Pro</div>
+			      <div style='width:60px;height:2px;background:#1a9e75;'></div>
+			    </div>
+			  </div>
+			</div>"
+		lineageTag: 47349cc1-b3db-458c-92f1-82609d320300
+
+	measure 'HTML Titulo_tendencia' =
+			
+			"<div style='width:1090px;height:86px;background:#ffffff;display:flex;align-items:center;justify-content:center;box-sizing:border-box;border:1px solid #d0d5dd;position:relative;overflow:hidden;'>
+			  <div style='position:absolute;left:0;top:0;width:5px;height:100%;background:#1a6fa8;'></div>
+			  <div style='position:absolute;right:0;top:0;width:5px;height:100%;background:#1a6fa8;'></div>
+			  <div style='display:flex;flex-direction:column;align-items:center;gap:4px;'>
+			    <div style='font-size:26px;font-weight:700;color:#1a2a3a;font-family:Segoe UI,sans-serif;'>Tendencia por Eventos 2021–" &"2025" & "</div>
+			    <div style='display:flex;align-items:center;gap:12px;'>
+			      <div style='width:60px;height:2px;background:#1a9e75;'></div>
+			      <div style='font-size:12px;color:#5a7a9a;letter-spacing:0.12em;text-transform:uppercase;font-family:Segoe UI,sans-serif;'>Global Football Retail · PitchSide Pro</div>
+			      <div style='width:60px;height:2px;background:#1a9e75;'></div>
+			    </div>
+			  </div>
+			</div>"
+		lineageTag: 16fe4465-63a0-4c4e-8ef2-765eadacc28f
+
+	measure 'HTML Titulo_Detalle' =
+			
+			"<div style='width:1090px;height:86px;background:#ffffff;display:flex;align-items:center;justify-content:center;box-sizing:border-box;border:1px solid #d0d5dd;position:relative;overflow:hidden;'>
+			  <div style='position:absolute;left:0;top:0;width:5px;height:100%;background:#1a6fa8;'></div>
+			  <div style='position:absolute;right:0;top:0;width:5px;height:100%;background:#1a6fa8;'></div>
+			  <div style='display:flex;flex-direction:column;align-items:center;gap:4px;'>
+			    <div style='font-size:26px;font-weight:700;color:#1a2a3a;font-family:Segoe UI,sans-serif;'>Toma de decisiones 2021–" &"2025" & "</div>
+			    <div style='display:flex;align-items:center;gap:12px;'>
+			      <div style='width:60px;height:2px;background:#1a9e75;'></div>
+			      <div style='font-size:12px;color:#5a7a9a;letter-spacing:0.12em;text-transform:uppercase;font-family:Segoe UI,sans-serif;'>Global Football Retail · PitchSide Pro</div>
+			      <div style='width:60px;height:2px;background:#1a9e75;'></div>
+			    </div>
+			  </div>
+			</div>"
+		lineageTag: 358b4232-6021-4ad8-b26f-8901ca036b85
+
+	measure 'Customer AA' =
+			
+			VAR Inicio_ =   20250101
+			VAR Final_ = 20251231
+			VAR result =
+			CALCULATE ( [TotalCustomer] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		lineageTag: 2fb45951-77df-40c9-8e58-d2b33db809dd
+
+		formatStringDefinition =
+				VAR _ValorActual =
+				    SELECTEDMEASURE()
+				VAR _NumeroFormato =
+				    SWITCH (
+				        TRUE (),
+				        _ValorActual <= 1E3, "#,0.",
+				        _ValorActual <= 1E4, "#,0,.00 K",
+				        _ValorActual <= 1E5, "#,0,.0 K",
+				        _ValorActual <= 1E6, "#,0,. K",
+				        _ValorActual <= 1E7, "#,0,,.00 M",
+				        _ValorActual <= 1E8, "#,0,,.0 M",
+				        _ValorActual <= 1E9, "#,0,,. M"
+				    )
+				RETURN
+				    _NumeroFormato
+
+	measure 'Ordenes AA' =
+			
+			VAR Inicio_ =   20250101
+			VAR Final_ = 20251231
+			VAR result =
+			CALCULATE ( [TotalOrdener] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		lineageTag: e3ec749b-bb23-4091-ab6b-00a4efe4ab28
+
+		formatStringDefinition =
+				VAR _ValorActual =
+				    SELECTEDMEASURE()
+				VAR _NumeroFormato =
+				    SWITCH (
+				        TRUE (),
+				        _ValorActual <= 1E3, "#,0.",
+				        _ValorActual <= 1E4, "#,0,.00 K",
+				        _ValorActual <= 1E5, "#,0,.0 K",
+				        _ValorActual <= 1E6, "#,0,. K",
+				        _ValorActual <= 1E7, "#,0,,.00 M",
+				        _ValorActual <= 1E8, "#,0,,.0 M",
+				        _ValorActual <= 1E9, "#,0,,. M"
+				    )
+				RETURN
+				    _NumeroFormato
+
+	measure 'Ticket Promedio AA' =
+			
+			VAR Inicio_ =   20250101
+			VAR Final_ = 20251231
+			VAR result =
+			CALCULATE ( [Ticket Promedio] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		lineageTag: 86d18a7f-1c7b-4d8f-b7b4-575bde56066c
+
+		formatStringDefinition =
+				VAR _ValorActual =
+				    SELECTEDMEASURE()
+				VAR _NumeroFormato =
+				    SWITCH (
+				        TRUE (),
+				        _ValorActual <= 1E3, "#,0.",
+				        _ValorActual <= 1E4, "#,0,.00 K",
+				        _ValorActual <= 1E5, "#,0,.0 K",
+				        _ValorActual <= 1E6, "#,0,. K",
+				        _ValorActual <= 1E7, "#,0,,.00 M",
+				        _ValorActual <= 1E8, "#,0,,.0 M",
+				        _ValorActual <= 1E9, "#,0,,. M"
+				    )
+				RETURN
+				    _NumeroFormato
+
+	measure '%Rate AA' =
+			
+			VAR Inicio_ =   20250101
+			VAR Final_ = 20251231
+			VAR result =
+			CALCULATE ([%Rate] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 5afe3e38-9aa3-4882-a748-6a5de08dfe96
+
+	measure 'Customer PY' =
+			
+			VAR Inicio_ =   20240101
+			VAR Final_ = 202401231
+			VAR result =
+			CALCULATE ( [TotalCustomer] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		formatString: 0
+		lineageTag: 0150bc0e-5344-44dd-8ef2-a8f801af255a
+
+	measure 'Ordenes PY' =
+			
+			VAR Inicio_ =   20240101
+			VAR Final_ = 20241231
+			VAR result =
+			CALCULATE ( [TotalOrdener] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		formatString: 0
+		lineageTag: 381ba119-1fbd-42d8-b419-d71af65d2641
+
+	measure 'Ticket Promedio PY' =
+			
+			VAR Inicio_ =   20240101
+			VAR Final_ = 20241231
+			VAR result =
+			CALCULATE ( [Ticket Promedio] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		lineageTag: 5bb35217-773c-4df2-9fb8-c52286e001f1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '%Rate PY' =
+			
+			VAR Inicio_ =   20240101
+			VAR Final_ = 20241231
+			VAR result =
+			CALCULATE ([%Rate] ,DimDate[DateKey] >=  Inicio_  && DimDate[DateKey] <=  Final_ )
+			
+			RETURN
+			result
+		lineageTag: d3e4efd7-68df-4f58-b456-aa7e05ccb198
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAR Clientes' = DIVIDE( [Customer AA] - [Customer PY] ,[Customer PY])
+		lineageTag: d8e3c1d2-ab81-44df-bf8e-9d97a73b0586
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAR Ordenes' = DIVIDE( [Ordenes AA] - [Ordenes PY] ,[Ordenes PY])
+		lineageTag: cb3ef490-744d-47fa-8074-9981fda5fb40
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAR Ticket' = DIVIDE( [Ticket Promedio AA] - [Ticket Promedio PY] ,[Ticket Promedio PY])
+		lineageTag: e5e68c50-0b84-49ca-892c-496774ebe767
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'VAR Rate' = DIVIDE( [%Rate AA] - [%Rate PY] ,[%Rate PY])
+		lineageTag: 590bc1a8-a239-447d-a067-543f534c6380
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure HTML_Tabla =
+			
+			VAR _data =
+			    SUMMARIZECOLUMNS(
+			        'DimRegion'[Country],
+			        'DimRegion'[MacroRegion],
+			        'DimProduct'[Category],
+			        'DimProduct'[Subcategory],
+			        "Ordenes", 'Medida'[TotalOrdener],
+			        "Venta Neta", 'Medida'[Venta Neta],
+			        "Utilidad",   'Medida'[Utilidad],
+			        "Rate",       'Medida'[%Rate],
+			        "Ticket",     'Medida'[Ticket Promedio],
+			        "Margen",     'Medida'[Margen]
+			    )
+			
+			VAR _maxVenta   = MAXX( _data, [Venta Neta] )
+			VAR _maxOrdenes = MAXX( _data, [Ordenes] )
+			VAR _maxUtil    = MAXX( _data, [Utilidad] )
+			
+			VAR _html_inicio = "
+			<style>
+			  *{box-sizing:border-box;margin:0;padding:0}
+			  body{font-family:'Segoe UI',sans-serif;font-size:11px;color:#1F2937;background:#F6F7F9}
+			  .wrap{padding:8px;background:#F6F7F9}
+			  table{width:100%;border-collapse:collapse;table-layout:fixed}
+			  th{text-align:left;font-weight:700;font-size:11px;color:#1F2937;
+			     padding:7px 10px;border-bottom:1px solid #E5E7EB;
+			     background:#EAF6FB;white-space:nowrap}
+			  .num{text-align:right;font-variant-numeric:tabular-nums}
+			  td{padding:5px 10px;border-bottom:1px solid #E5E7EB;
+			     font-size:11px;color:#1F2937;vertical-align:middle}
+			  tr:nth-child(even) td{background:#FAFAFA}
+			  tr:hover td{background:#EAF6FB}
+			  .bar-wrap{display:flex;align-items:center;gap:5px}
+			  .bar-bg{width:60px;height:6px;background:#E5E7EB;border-radius:3px;flex-shrink:0}
+			  .bar-fill{height:6px;border-radius:3px}
+			  .mclr-ok{color:#08C792;font-weight:700}
+			  .mclr-mid{color:#854f0b;font-weight:700}
+			  .mclr-dn{color:#ED2939;font-weight:700}
+			  .bullet{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:3px;vertical-align:middle}
+			</style>
+			<div class='wrap'><table>
+			<thead><tr>
+			  <th style='width:72px'>País</th>
+			  <th style='width:80px'>MacroRegión</th>
+			  <th style='width:78px'>Categoría</th>
+			  <th style='width:82px'>Subcategoría</th>
+			  <th style='width:110px'>Venta neta</th>
+			  <th style='width:110px'>Órdenes AA</th>
+			  <th style='width:110px'>Utilidad</th>
+			  <th style='width:58px;text-align:right'>%Rate</th>
+			  <th style='width:62px;text-align:right'>Ticket</th>
+			  <th style='width:70px;text-align:right'>Margen</th>
+			</tr></thead><tbody>"
+			
+			VAR _filas =
+			    CONCATENATEX(
+			        TOPN(
+			            501, _data,
+			            'DimRegion'[Country],      ASC,
+			            'DimRegion'[MacroRegion],  ASC,
+			            'DimProduct'[Category],    ASC,
+			            'DimProduct'[Subcategory], ASC
+			        ),
+			
+			        VAR _v  = [Venta Neta]
+			        VAR _o  = [Ordenes]
+			        VAR _u  = [Utilidad]
+			        VAR _m  = [Margen]
+			        VAR _r  = [Rate]
+			        VAR _t  = [Ticket]
+			
+			        VAR _pctV = ROUND( DIVIDE( _v, _maxVenta )   * 100, 0 )
+			        VAR _pctO = ROUND( DIVIDE( _o, _maxOrdenes ) * 100, 0 )
+			        VAR _pctU = ROUND( DIVIDE( _u, _maxUtil )    * 100, 0 )
+			
+			        VAR _clrV = IF( _pctV >= 60, "#08C792", IF( _pctV >= 30, "#48B8DE", "#9CA3AF" ) )
+			        VAR _clrO = IF( _pctO >= 60, "#4872A5", IF( _pctO >= 30, "#74B8DE", "#9CA3AF" ) )
+			        VAR _clrU = IF( _pctU >= 60, "#08C792", IF( _pctU >= 30, "#F2C94C", "#ED2939" ) )
+			
+			        VAR _mCls =
+			            IF( _m >= 0.30, "mclr-ok", IF( _m >= 0.15, "mclr-mid", "mclr-dn" ) )
+			        VAR _bullet =
+			            IF( _m >= 0.30, "#08C792", IF( _m >= 0.15, "#F2C94C", "#ED2939" ) )
+			
+			        RETURN
+			            "<tr>" &
+			                "<td style='font-weight:700'>" & 'DimRegion'[Country]     & "</td>" &
+			                "<td style='color:#6B7280'>"   & 'DimRegion'[MacroRegion] & "</td>" &
+			                "<td style='color:#6B7280'>"   & 'DimProduct'[Category]   & "</td>" &
+			                "<td>"                         & 'DimProduct'[Subcategory] & "</td>" &
+			
+			                "<td>" &
+			                    "<div class='bar-wrap'>" &
+			                        "<div class='bar-bg'><div class='bar-fill' style='width:" & _pctV & "%;background:" & _clrV & "'></div></div>" &
+			                        "<span style='font-size:10px;color:#1F2937'>$" & FORMAT( _v, "#,0" ) & "</span>" &
+			                    "</div>" &
+			                "</td>" &
+			
+			                "<td>" &
+			                    "<div class='bar-wrap'>" &
+			                        "<div class='bar-bg'><div class='bar-fill' style='width:" & _pctO & "%;background:" & _clrO & "'></div></div>" &
+			                        "<span style='font-size:10px;color:#1F2937'>" & FORMAT( _o, "#,0" ) & "</span>" &
+			                    "</div>" &
+			                "</td>" &
+			
+			                "<td>" &
+			                    "<div class='bar-wrap'>" &
+			                        "<div class='bar-bg'><div class='bar-fill' style='width:" & _pctU & "%;background:" & _clrU & "'></div></div>" &
+			                        "<span style='font-size:10px;color:#1F2937'>$" & FORMAT( _u, "#,0" ) & "</span>" &
+			                    "</div>" &
+			                "</td>" &
+			
+			                "<td class='num' style='color:#6B7280'>" & FORMAT( _r, "0.0%" ) & "</td>" &
+			                "<td class='num' style='color:#6B7280'>$" & FORMAT( _t, "#,0" ) & "</td>" &
+			
+			                "<td class='num'>" &
+			                    "<span class='bullet' style='background:" & _bullet & "'></span>" &
+			                    "<span class='" & _mCls & "'>" & FORMAT( _m, "0.0%" ) & "</span>" &
+			                "</td>" &
+			            "</tr>",
+			        "",
+			        'DimRegion'[Country],      ASC,
+			        'DimRegion'[MacroRegion],  ASC,
+			        'DimProduct'[Category],    ASC,
+			        'DimProduct'[Subcategory], ASC
+			    )
+			
+			RETURN _html_inicio & _filas & "</tbody></table></div>"
+		lineageTag: 03f79392-3e47-4520-ad2a-054c5d0bd24b
+
+	partition Medida = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+

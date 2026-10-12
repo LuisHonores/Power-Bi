@@ -1,0 +1,41 @@
+table DataDictionary
+	lineageTag: d6d36e93-a2b2-4c99-be1a-2281dc9e73d6
+
+	column Column1
+		dataType: string
+		lineageTag: da0f8f3e-567b-4057-8a99-ead6ef911b96
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column2
+		dataType: string
+		lineageTag: 6e3a6184-70c8-42c4-a980-ccbd2016588a
+		summarizeBy: none
+		sourceColumn: Column2
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column3
+		dataType: string
+		lineageTag: 8020ffcb-17d2-4e6c-91a7-768c325abdf4
+		summarizeBy: none
+		sourceColumn: Column3
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DataDictionary = m
+		mode: import
+		queryGroup: 'Dimension Tables'
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\luhou\Downloads\DataDictionary.csv"),[Delimiter=",", Columns=3, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Column1", type text}, {"Column2", type text}, {"Column3", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

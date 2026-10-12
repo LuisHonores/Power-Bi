@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "ad97e4a47bf754b57010",
+  "position": {
+    "x": 175.02278942570646,
+    "y": 95.679124886052875,
+    "z": 7000,
+    "height": 589.24339106654509,
+    "width": 1094.475843208751,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+    "query": {
+      "queryState": {
+        "content": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medida"
+                    }
+                  },
+                  "Property": "HTML_Tabla"
+                }
+              },
+              "queryRef": "Medida.HTML_Tabla_Storytelling",
+              "nativeQueryRef": "HTML_Tabla"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

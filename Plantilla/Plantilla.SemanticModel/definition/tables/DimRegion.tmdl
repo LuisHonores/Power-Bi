@@ -1,0 +1,103 @@
+table DimRegion
+	lineageTag: 8d2cf882-c3b2-4259-86f2-0b826abd88ab
+
+	column RegionKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 00f5dad4-0911-4282-a97f-2b26ef3094cd
+		summarizeBy: none
+		sourceColumn: RegionKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column MacroRegion
+		dataType: string
+		lineageTag: 24eddc0c-1380-42fd-8eba-e46d0de46779
+		summarizeBy: none
+		sourceColumn: MacroRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: d5a6523c-87be-4b9c-93cd-f69f40397b5c
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column MarketTier
+		dataType: string
+		lineageTag: 42cb1542-5097-4fe9-bb89-5dc1044d418b
+		summarizeBy: none
+		sourceColumn: MarketTier
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyCode
+		dataType: string
+		lineageTag: 65188419-d258-48b1-9126-641128fd5916
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column PriceIndex
+		dataType: double
+		lineageTag: a1e17f5a-a9a4-4e6b-b795-d9f99f361a07
+		summarizeBy: sum
+		sourceColumn: PriceIndex
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ConversionIndex
+		dataType: double
+		lineageTag: e3ae294d-597a-47d0-803e-c8d1cfbd2bac
+		summarizeBy: sum
+		sourceColumn: ConversionIndex
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TopClub1
+		dataType: string
+		lineageTag: f68dcb3a-14c4-4ab9-bada-08d0c3d909a7
+		summarizeBy: none
+		sourceColumn: TopClub1
+
+		annotation SummarizationSetBy = Automatic
+
+	column TopClub2
+		dataType: string
+		lineageTag: d0ab6a26-6098-4482-a542-d4e21200fecf
+		summarizeBy: none
+		sourceColumn: TopClub2
+
+		annotation SummarizationSetBy = Automatic
+
+	column TopClub3
+		dataType: string
+		lineageTag: 0b707180-ec7c-41dd-bf79-28e111bd6778
+		summarizeBy: none
+		sourceColumn: TopClub3
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DimRegion = m
+		mode: import
+		queryGroup: 'Dimension Tables'
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\luhou\Downloads\DimRegion.csv"),[Delimiter=",", Columns=10, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"RegionKey", Int64.Type}, {"MacroRegion", type text}, {"Country", type text}, {"MarketTier", type text}, {"CurrencyCode", type text}, {"PriceIndex", type number}, {"ConversionIndex", type number}, {"TopClub1", type text}, {"TopClub2", type text}, {"TopClub3", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

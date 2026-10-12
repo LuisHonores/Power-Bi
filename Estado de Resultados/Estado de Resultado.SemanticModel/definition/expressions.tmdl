@@ -1,0 +1,37 @@
+expression Dim_Grupo0 =
+		let
+		    Origen = Excel.Workbook(File.Contents("C:\Users\luhou\OneDrive\PB\Fuente\Estado de Resultados.xlsx"), null, true),
+		    tablon_Sheet = Origen{[Item="tablon",Kind="Sheet"]}[Data],
+		    #"Encabezados promovidos" = Table.PromoteHeaders(tablon_Sheet, [PromoteAllScalars=true]),
+		    #"Personalizada agregada" = Table.AddColumn(#"Encabezados promovidos", "Fecha", each "01/01/"&Text.From([PERIODO])),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Personalizada agregada",{{"PERIODO", Int64.Type}, {"GRUPO_1", type text}, {"GRUPO_0", type text}, {"Valor", Int64.Type}, {"Fecha", type date}}),
+		    #"Otras columnas quitadas" = Table.SelectColumns(#"Tipo cambiado",{"GRUPO_0", "GRUPO_1"}),
+		    #"Filas agrupadas" = Table.Group(#"Otras columnas quitadas", {"GRUPO_1", "GRUPO_0"}, {{"Recuento", each Table.RowCount(_), Int64.Type}}),
+		    #"Otras columnas quitadas1" = Table.SelectColumns(#"Filas agrupadas",{"GRUPO_0"}),
+		    #"Duplicados quitados" = Table.Distinct(#"Otras columnas quitadas1"),
+		    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "IdsGrupo_0", 1, 1, Int64.Type)
+		in
+		    #"Índice agregado"
+	lineageTag: 89f64dae-9cd5-4249-b962-bb4cca6eade1
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+
+expression DimGrupo1 =
+		let
+		    Origen = Excel.Workbook(File.Contents("C:\Users\luhou\OneDrive\PB\Fuente\Estado de Resultados.xlsx"), null, true),
+		    tablon_Sheet = Origen{[Item="tablon",Kind="Sheet"]}[Data],
+		    #"Encabezados promovidos" = Table.PromoteHeaders(tablon_Sheet, [PromoteAllScalars=true]),
+		    #"Otras columnas quitadas1" = Table.SelectColumns(#"Encabezados promovidos",{"GRUPO_1"}),
+		    #"Tipo cambiado" = Table.TransformColumnTypes(#"Otras columnas quitadas1",{{"GRUPO_1", type text}}),
+		    #"Duplicados quitados" = Table.Distinct(#"Tipo cambiado"),
+		    #"Índice agregado" = Table.AddIndexColumn(#"Duplicados quitados", "IdsGrupo1", 1, 1, Int64.Type)
+		in
+		    #"Índice agregado"
+	lineageTag: 0b6f53c6-11f0-442c-8921-239982761874
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

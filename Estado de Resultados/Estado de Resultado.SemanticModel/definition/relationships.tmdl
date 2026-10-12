@@ -1,0 +1,8 @@
+relationship 5959c1cf-0185-828a-1419-cf7c4b6094bf
+	fromColumn: tablon.Fecha
+	toColumn: Dim_Calendar.Date
+
+relationship AutoDetected_a53dfb36-4329-4ef7-baff-1c9b85174d23
+	fromColumn: tablon.IdsGrupo1
+	toColumn: Dimension.IdsGrupo1
+

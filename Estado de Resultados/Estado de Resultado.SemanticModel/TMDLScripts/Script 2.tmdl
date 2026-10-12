@@ -1,0 +1,116 @@
+createOrReplace
+
+	ref table Medida
+
+		measure 'Costo de ventas_' =
+				
+				
+				CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Costo de Ventas")
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure Ganancia_ =
+				
+				CALCULATE( [Ingreso],REMOVEFILTERS()) +  CALCULATE(  [Costo de ventas_],REMOVEFILTERS())
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure 'Ganancia Antes de Impuesto_' =
+				
+				
+				CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Utilidad antes de Impuestos")
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure 'Ganancia Antes de Impuesto V2_' =
+				
+				[Ganancia Operativa V2_] + CALCULATE([Ganancia Operativa_], REMOVEFILTERS())
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure 'Ganancia Bruta_' =
+				
+				
+				CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Utilidad Bruta")
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure 'Ganancia Neta_' =
+				
+				
+				CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Utilidad Neta del Ejercicio")
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure 'Ganancia Operativa_' =
+				
+				
+				CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Utilidad Operativa")
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure 'Ganancia Operativa V2_' = [Ganancia_] + CALCULATE([Ganancia Bruta_], REMOVEFILTERS())
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure GananciaBruta_ = ```
+				
+				
+				CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Ingresos",REMOVEFILTERS())
+				
+				
+				```
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure Ingreso_ =
+				
+				
+				CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Ingresos")
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure Pre_Val_Financieros_ = ```
+				
+				
+				 IF (
+				  ISINSCOPE('Dimension'[GRUPO_1]),
+				  [2024_],
+				
+				 SWITCH( 
+				    SELECTEDVALUE('Dimension'[GRUPO_0]),
+				    "Ingresos" , [Ingreso_],
+				    "Costo de Ventas", [Costo de ventas_],
+				    "Utilidad Bruta",[Ganancia_],
+				    "Utilidad Operativa",[Ganancia Operativa V2_],
+				    "Utilidad antes de Impuestos",[Ganancia Antes de Impuesto V2_],
+				    "Utilidad Neta del Ejercicio",[Ganancia Neta_]
+				 ))
+				
+				```
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure Val_Financieros_ = ```
+				
+				
+				
+				 IF (
+				  ISINSCOPE('Dimension'[GRUPO_1]),
+				  [2024_],
+				ABS( [2024_]))
+				```
+			formatString: 0
+			displayFolder: 02_2024
+			
+		measure Var_Val_Financieros_ = ```
+				
+				DIVIDE(
+				        [Val_Financieros_],
+				     [GananciaBruta_]
+				)
+				
+				```
+			formatString: 0.00\ %;-0.00\ %;0.00\ %
+			displayFolder: 02_2024
+			

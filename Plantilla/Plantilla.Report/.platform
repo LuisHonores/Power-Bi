@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Plantilla"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "93b04e3c-92c9-46a8-b8f8-afcb7bdf1968"
+  }
+}

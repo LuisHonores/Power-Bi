@@ -1,0 +1,82 @@
+table FactTraffic
+	lineageTag: e06f2742-cf4c-40bc-a73a-bb817ee2046f
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 09e77f63-10fc-4e8f-8759-ced1e0aecf6a
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column RegionKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 04c15479-6ae7-4e07-8386-6e208c027671
+		summarizeBy: none
+		sourceColumn: RegionKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ChannelKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 25ebe8e8-d314-481f-a86d-3e9cfe9cb0d2
+		summarizeBy: none
+		sourceColumn: ChannelKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Sessions
+		dataType: int64
+		formatString: 0
+		lineageTag: 409b3224-234c-40af-80fc-e72914df26fb
+		summarizeBy: sum
+		sourceColumn: Sessions
+
+		annotation SummarizationSetBy = Automatic
+
+	column AddToCart
+		dataType: int64
+		formatString: 0
+		lineageTag: f5427867-3a26-422d-8481-da81424d0f1a
+		summarizeBy: sum
+		sourceColumn: AddToCart
+
+		annotation SummarizationSetBy = Automatic
+
+	column Conversions
+		dataType: int64
+		formatString: 0
+		lineageTag: 16770306-95a7-481a-a219-31092b4cb4b9
+		summarizeBy: sum
+		sourceColumn: Conversions
+
+		annotation SummarizationSetBy = Automatic
+
+	column BounceRate
+		dataType: double
+		lineageTag: 649c461f-d66c-43af-bc86-98733d58f41a
+		summarizeBy: sum
+		sourceColumn: BounceRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FactTraffic = m
+		mode: import
+		queryGroup: 'Fact Tables'
+		source =
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\luhou\Downloads\FactTraffic.csv"),[Delimiter=",", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"DateKey", Int64.Type}, {"RegionKey", Int64.Type}, {"ChannelKey", Int64.Type}, {"Sessions", Int64.Type}, {"AddToCart", Int64.Type}, {"Conversions", Int64.Type}, {"BounceRate", type number}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

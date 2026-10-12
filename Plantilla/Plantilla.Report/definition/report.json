@@ -1,0 +1,133 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY26SU05",
+      "reportVersionAtImport": {
+        "visual": "2.9.0",
+        "report": "3.3.0",
+        "page": "2.3.1"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Jet_Athletica_-_Corporate_Ligh6809854724978057.json",
+      "reportVersionAtImport": {
+        "visual": "2.10.0",
+        "report": "3.4.0",
+        "page": "2.3.1"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "htmlContent443BE3AD55E043BF878BED274D3A6865",
+    "deneb7E15AEF80B9E4D4F8E12924291ECE89A",
+    "htmlContent443BE3AD55E043BF878BED274D3A6855"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY26SU05",
+          "path": "BaseThemes/CY26SU05.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "boxicons--location-filled3203859206042595.svg",
+          "path": "boxicons--location-filled3203859206042595.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Detalle7664402099239833.svg",
+          "path": "Detalle7664402099239833.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Jet_Athletica_-_Corporate_Ligh6809854724978057.json",
+          "path": "Jet_Athletica_-_Corporate_Ligh6809854724978057.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "material-symbols--dashboard-ro15711919204113955.svg",
+          "path": "material-symbols--dashboard-ro15711919204113955.svg",
+          "type": "Image"
+        },
+        {
+          "name": "material-symbols--trending-up36204034128828866.svg",
+          "path": "material-symbols--trending-up36204034128828866.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Ranking_(3)9393914812325808.svg",
+          "path": "Ranking_(3)9393914812325808.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Resumen_(2)9256398519593452.svg",
+          "path": "Resumen_(2)9256398519593452.svg",
+          "type": "Image"
+        },
+        {
+          "name": "solar--list-bold-duotone_(2)15947566378132239.svg",
+          "path": "solar--list-bold-duotone_(2)15947566378132239.svg",
+          "type": "Image"
+        },
+        {
+          "name": "solar--ranking-linear_(1)813886396993822.svg",
+          "path": "solar--ranking-linear_(1)813886396993822.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Tendencia18486239363253154.svg",
+          "path": "Tendencia18486239363253154.svg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

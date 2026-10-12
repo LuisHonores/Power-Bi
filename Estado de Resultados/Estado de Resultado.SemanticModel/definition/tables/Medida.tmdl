@@ -1,0 +1,355 @@
+table Medida
+	lineageTag: 1c6d8d68-d295-4807-9c7f-0286da575e57
+
+	measure 2024_ = CALCULATE (  SUM(tablon[Valor]),Dim_Calendar[Year]=2024)
+		lineageTag: 8db1a876-2f23-4f40-aa5d-c6ac46449d12
+
+		formatStringDefinition =
+				VAR _CurrentValue =
+				   ABS( SELECTEDMEASURE())
+				VAR _NumberFormat =
+				    SWITCH (
+				        TRUE (),
+				        _CurrentValue <= 1E3, "#,0.",
+				        _CurrentValue <= 1E4, "#,0,.00 K",
+				        _CurrentValue <= 1E5, "#,0,.0 K",
+				        _CurrentValue <= 1E6, "#,0,. K",
+				        _CurrentValue <= 1E7, "#,0,,.00 MM",
+				        _CurrentValue <= 1E8, "#,0,,.0 MM",
+				        _CurrentValue <= 1E9, "#,0,,. MM"
+				    )
+				VAR _FormatString =
+				    _NumberFormat & " Avg. Views / Video"
+				RETURN
+				 _NumberFormat
+
+	measure 2023_ = CALCULATE (  SUM(tablon[Valor]),Dim_Calendar[Year]=2023)
+		lineageTag: 81d6c341-f8d8-4396-ba38-1b52e62d74a5
+
+		formatStringDefinition =
+				VAR _CurrentValue =
+				   ABS( SELECTEDMEASURE())
+				VAR _NumberFormat =
+				    SWITCH (
+				        TRUE (),
+				        _CurrentValue <= 1E3, "#,0.",
+				        _CurrentValue <= 1E4, "#,0,.00 K",
+				        _CurrentValue <= 1E5, "#,0,.0 K",
+				        _CurrentValue <= 1E6, "#,0,. K",
+				        _CurrentValue <= 1E7, "#,0,,.00 MM",
+				        _CurrentValue <= 1E8, "#,0,,.0 MM",
+				        _CurrentValue <= 1E9, "#,0,,. MM"
+				    )
+				VAR _FormatString =
+				    _NumberFormat & " Avg. Views / Video"
+				RETURN
+				 _NumberFormat
+
+	measure VAR_Barras = ```
+			
+			 IF (ISINSCOPE('Dimension'[GRUPO_1]),
+			 ABS( [2024_])  - ABS( [2023_]),BLANK())
+			```
+		lineageTag: 9789ac06-bfe7-4ba7-95c1-2b1e1fac8018
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure VAR_% = DIVIDE(( [2024_] - [2023_]),[2023_])
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: abc54a3a-fbea-4f76-8961-84d57cc8ba8c
+
+	measure GananciaBruta = ```
+			
+			
+			CALCULATE( [2023_] ,'Dimension'[GRUPO_0] = "Ingresos",REMOVEFILTERS())
+			
+			
+			```
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: 13b4f62a-6633-4bf2-88af-a8438bb708b4
+
+	measure Var_Val_Financieros = ```
+			
+			DIVIDE(
+			        [Val_Financieros],
+			     [GananciaBruta]
+			)
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: 01_2023
+		lineageTag: ebc3cf71-7370-40ea-9840-7f11bea50016
+
+	measure Pre_Val_Financieros = ```
+			
+			
+			 IF (
+			  ISINSCOPE('Dimension'[GRUPO_1]),
+			  [2023_],
+			
+			 SWITCH( 
+			    SELECTEDVALUE('Dimension'[GRUPO_0]),
+			    "Ingresos" , [Ingreso],
+			    "Costo de Ventas", [Costo de ventas],
+			    "Utilidad Bruta",[Ganancia],
+			    "Utilidad Operativa",[Ganancia Operativa V2],
+			    "Utilidad antes de Impuestos",[Ganancia Antes de Impuesto V2],
+			    "Utilidad Neta del Ejercicio",[Ganancia Neta]
+			 ))
+			
+			```
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: 2f93ab28-b0eb-41f2-92f2-58230e5bb3c7
+
+	measure Ganancia =
+			
+			CALCULATE( [Ingreso],REMOVEFILTERS()) +  CALCULATE(  [Costo de ventas_],REMOVEFILTERS())
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: b0e77256-039f-40d7-aab2-1a3bee618f42
+
+	measure Ingreso =
+			
+			
+			CALCULATE( [2023_] ,'Dimension'[GRUPO_0] = "Ingresos")
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: 6005b4f9-8d23-4776-abc6-0424c07782dc
+
+	measure 'Costo de ventas' =
+			
+			
+			CALCULATE( [2023_] ,'Dimension'[GRUPO_0] = "Costo de Ventas")
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: d9f7f503-7a80-4e42-8c76-13e85b044011
+
+	measure 'Ganancia Bruta' =
+			
+			
+			CALCULATE( [2023_] ,'Dimension'[GRUPO_0] = "Utilidad Bruta")
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: c909e019-ee0b-490f-994f-cd6f2cda7f6d
+
+	measure 'Ganancia Operativa' =
+			
+			
+			CALCULATE( [2023_] ,'Dimension'[GRUPO_0] = "Utilidad Operativa")
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: add8a515-d743-4512-a2eb-a1f959962080
+
+	measure 'Ganancia Antes de Impuesto' =
+			
+			
+			CALCULATE( [2023_] ,'Dimension'[GRUPO_0] = "Utilidad antes de Impuestos")
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: 05f985f0-7f6b-4697-8325-a341361c94f4
+
+	measure 'Ganancia Neta' =
+			
+			
+			CALCULATE( [2023_] ,'Dimension'[GRUPO_0] = "Utilidad Neta del Ejercicio")
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: 34f3dfa2-d971-45b0-9723-06882dc39c35
+
+	measure 'Ganancia Operativa V2' = [Ganancia] + CALCULATE([Ganancia Bruta], REMOVEFILTERS())
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: 9648213b-021d-41aa-9fef-dbeb9ec80c0e
+
+	measure 'Ganancia Antes de Impuesto V2' =
+			
+			[Ganancia Operativa V2] + CALCULATE([Ganancia Operativa], REMOVEFILTERS())
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: dab0570a-c6bd-4480-a8b2-aaa38972ad6d
+
+	measure Val_Financieros = ```
+			
+			
+			
+			 IF (
+			  ISINSCOPE('Dimension'[GRUPO_1]),
+			  [2023_],
+			ABS( [2023_]))
+			```
+		formatString: 0
+		displayFolder: 01_2023
+		lineageTag: f91c9089-14b1-46f6-a388-7b159703e297
+
+	measure 'Costo de ventas_' =
+			
+			
+			CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Costo de Ventas")
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: 50ffc312-e70a-402d-90c5-5aa37f2d3ca7
+
+	measure 'Ganancia Antes de Impuesto_' =
+			
+			
+			CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Utilidad antes de Impuestos")
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: 668fa7d0-d7ae-496f-939a-8ee52796677b
+
+	measure 'Ganancia Antes de Impuesto V2_' =
+			
+			[Ganancia Operativa V2_] + CALCULATE([Ganancia Operativa_], REMOVEFILTERS())
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: 173e8813-9cb0-4cdb-8f9d-825c8636edc1
+
+	measure 'Ganancia Bruta_' =
+			
+			
+			CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Utilidad Bruta")
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: cac82e87-3705-4ae0-bacd-d48ff95ace16
+
+	measure 'Ganancia Neta_' =
+			
+			
+			CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Utilidad Neta del Ejercicio")
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: 2e7a4998-1b39-42d3-b9d8-66a4ee8e4e17
+
+	measure 'Ganancia Operativa_' =
+			
+			
+			CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Utilidad Operativa")
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: e5a7bd64-33ae-41a3-bfd8-85ab95a373d6
+
+	measure 'Ganancia Operativa V2_' = [Ganancia_] + CALCULATE([Ganancia Bruta_], REMOVEFILTERS())
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: dc24bdbf-fc91-4a87-aa73-615465fba887
+
+	measure GananciaBruta_ = ```
+			
+			
+			CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Ingresos",REMOVEFILTERS())
+			
+			
+			```
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: 5bff46dd-d7cf-4bab-a253-3cafd6bc15cd
+
+	measure Ingreso_ =
+			
+			
+			CALCULATE( [2024_] ,'Dimension'[GRUPO_0] = "Ingresos")
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: 78e0acff-a08d-418b-9a9b-9a0c57f7f868
+
+	measure Pre_Val_Financieros_ = ```
+			
+			
+			 IF (
+			  ISINSCOPE('Dimension'[GRUPO_1]),
+			  [2024_],
+			
+			 SWITCH( 
+			    SELECTEDVALUE('Dimension'[GRUPO_0]),
+			    "Ingresos" , [Ingreso_],
+			    "Costo de Ventas", [Costo de ventas_],
+			    "Utilidad Bruta",[Ganancia_],
+			    "Utilidad Operativa",[Ganancia Operativa V2_],
+			    "Utilidad antes de Impuestos",[Ganancia Antes de Impuesto V2_],
+			    "Utilidad Neta del Ejercicio",[Ganancia Neta_]
+			 ))
+			
+			```
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: c57305d8-30b9-4eaf-8a51-26fbfd7c7c99
+
+	measure Val_Financieros_ = ```
+			
+			
+			
+			 IF (
+			  ISINSCOPE('Dimension'[GRUPO_1]),
+			  [2024_],
+			ABS( [2024_]))
+			```
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: 263db688-37fb-49bc-bcd8-6fda82f585d2
+
+	measure Var_Val_Financieros_ = ```
+			
+			DIVIDE(
+			        [Val_Financieros_],
+			     [GananciaBruta_]
+			)
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		displayFolder: 02_2024
+		lineageTag: e5e1f51a-d30e-44eb-ad7f-adaec28542b5
+
+	measure Ganancia_ =
+			
+			CALCULATE( [Ingreso],REMOVEFILTERS()) +  CALCULATE(  [Costo de ventas_],REMOVEFILTERS())
+		formatString: 0
+		displayFolder: 02_2024
+		lineageTag: 3eb8b721-8c0d-4bd4-949e-3d9e77508d1f
+
+	measure VAR_ = ABS([2024_])-ABS([2023_])
+		lineageTag: 709e0125-39dc-48f8-8143-d6be8893dfb6
+
+		formatStringDefinition =
+				VAR _CurrentValue =
+				   ABS( SELECTEDMEASURE())
+				VAR _NumberFormat =
+				    SWITCH (
+				        TRUE (),
+				        _CurrentValue <= 1E3, "#,0.",
+				        _CurrentValue <= 1E4, "#,0,.00 K",
+				        _CurrentValue <= 1E5, "#,0,.0 K",
+				        _CurrentValue <= 1E6, "#,0,. K",
+				        _CurrentValue <= 1E7, "#,0,,.00 MM",
+				        _CurrentValue <= 1E8, "#,0,,.0 MM",
+				        _CurrentValue <= 1E9, "#,0,,. MM"
+				    )
+				VAR _FormatString =
+				    _NumberFormat & " Avg. Views / Video"
+				RETURN
+				 _NumberFormat
+
+	measure VAR_%_barras = ```
+			
+			 IF (ISINSCOPE('Dimension'[GRUPO_1]),
+			DIVIDE(( [2024_] - [2023_]),[2023_]),BLANK())
+			```
+		lineageTag: 390dbda7-84e1-486e-901e-ec8e0f8ee7ef
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Medida = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navegación
+

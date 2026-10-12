@@ -1,0 +1,32 @@
+relationship AutoDetected_9f082bde-3e7f-4a58-8912-0dd181aa2940
+	fromColumn: FactTraffic.RegionKey
+	toColumn: DimRegion.RegionKey
+
+relationship AutoDetected_2d273447-cf01-4a1f-a54e-f56566fbe2fb
+	fromColumn: FactSales.RegionKey
+	toColumn: DimRegion.RegionKey
+
+relationship AutoDetected_c644a0ae-9c09-4e19-b567-f79c28f546d2
+	fromColumn: FactSales.ProductKey
+	toColumn: DimProduct.ProductKey
+
+relationship AutoDetected_da74d52c-5cc1-4f4f-a003-2c12683c081a
+	fromColumn: FactTraffic.DateKey
+	toColumn: DimDate.DateKey
+
+relationship AutoDetected_5cbc88d6-359e-411d-bd5f-82fa25757092
+	fromColumn: FactSales.DateKey
+	toColumn: DimDate.DateKey
+
+relationship AutoDetected_7c547fd7-6d77-4678-be7f-b6e5e3a88f2b
+	fromColumn: FactSales.CustomerKey
+	toColumn: DimCustomer.CustomerKey
+
+relationship AutoDetected_28f796d7-c629-4657-a53b-759c8c6ee6ba
+	fromColumn: FactTraffic.ChannelKey
+	toColumn: DimChannel.ChannelKey
+
+relationship AutoDetected_fb5c2bf3-e875-49d6-83c0-92f4b53bdfca
+	fromColumn: FactSales.ChannelKey
+	toColumn: DimChannel.ChannelKey
+

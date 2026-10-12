@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.10.0/schema.json",
+  "name": "b338ba0ccec90ac8b26c",
+  "position": {
+    "x": 167,
+    "y": 0,
+    "z": 7000,
+    "height": 96.25,
+    "width": 1103,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "htmlContent443BE3AD55E043BF878BED274D3A6855",
+    "query": {
+      "queryState": {
+        "content": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medida"
+                    }
+                  },
+                  "Property": "HTML Titulo_tendencia"
+                }
+              },
+              "queryRef": "Medida.HTML Titulo_tendencia",
+              "nativeQueryRef": "HTML Titulo_tendencia"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

@@ -1,0 +1,90 @@
+table Dim_Calendar
+	lineageTag: fc20b0a8-b87d-47ef-b805-95c30804cc0b
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: General Date
+		lineageTag: 30eb6f5c-eaa5-4c8c-ba4d-0cda07d0a658
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: cb7c77df-385b-42bb-98ca-291039edd6ea
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNo
+		formatString: 0
+		lineageTag: c3632e7c-e6cb-4c8e-871c-d20f9e0cc390
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [MonthNo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: aec6576e-5cfc-4bf9-9096-40733aa6682d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: fc035edd-7fb0-4141-b9c2-cdfc75c82aa1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column YearMonth
+		lineageTag: 99339b7c-1e92-49ae-ae58-3c6af01008b8
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [YearMonth]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekdayNo
+		formatString: 0
+		lineageTag: 101977d6-ba89-4d9e-92b0-d854517808ba
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekdayNo]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		lineageTag: af95cea3-bbf5-4388-b09f-37869d4b5698
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Calendar = calculated
+		mode: import
+		source = ```
+				
+				  ADDCOLUMNS ( 
+				    CALENDAR ( DATE ( 2021,01,01),DATE ( 2024,12,31)),
+				   "Year", YEAR([Date]), 
+				    "MonthNo", MONTH([Date]), 
+				    "Month", FORMAT([Date],"mmm"),
+				    "Quarter", FORMAT([Date],"QQ"),
+				    "YearMonth", FORMAT([Date],"YYYY-MM"), 
+				    "WeekdayNo", WEEKDAY([Date],2), //1-Sun..Sat, 2-Mon..Sat
+				    "Weekday", FORMAT([Date],"ddd") )
+				```
+
+	annotation PBI_Id = 04e53af838674c64b9c25b3752106dcb
+
