@@ -1,80 +1,80 @@
-# Hi, I'm Luis Honores! 👋
+# ¡Hola, soy Pablo J. Moreno! 👋
 
-**GenAI Engineer | Sr. Data Scientist | AI Product Manager**
-
----
-
-## About Me
-
-I'm a **Sr. Data Scientist** and **AI Product Manager** who bridges the gap between technology, user needs, and business goals, with a deep understanding of engineering and FinOps.
-
-As a **GenAI Engineer**, I specialize in developing cutting-edge solutions. My work includes crafting **AI agents for automation**, advanced **RAG (Retrieval Augmented Generation) systems**, and leveraging technologies like **VectorDB** and **Pinecone** for robust data solutions. I lead teams in developing intelligent automation and multi-agentic systems by combining ML and Generative AI.
-
-My expertise also spans **Machine Learning Engineering**, **MLOps**, and **NLP**, where I have conceived numerous data products across diverse industries such as Banking, Personal Markets, FinTech, Supply Chain, and Legal Operations. I am passionate about applying **Machine Learning to Cyber Security (ML Sec)** and working with **Real Time Analytics**.
-
-A strong advocate for open source development, I'm a **Microsoft MVP for Data Platform** since 2019, co-author of *"Machine Learning in Power BI with R and Python"*, *"MLOps: from Notebook To Pipeline"*, and a University Professor of ML / AI and Quantitative Finance.
+**Ingeniero GenAI | Sr. Data Scientist | AI Product Manager**
 
 ---
 
-## Fun Fact
+## Sobre mí
 
-> *"Apparently, some top coders think I can't code in Python and was never a developer – guess being 'too product-oriented' makes me allergic to code!"* Who knows...
+Soy **Sr. Data Scientist** y **AI Product Manager**, y tiendo puentes entre la tecnología, las necesidades de los usuarios y los objetivos de negocio, con un profundo conocimiento de ingeniería y FinOps.
 
----
+Como **Ingeniero GenAI**, me especializo en desarrollar soluciones de vanguardia. Mi trabajo incluye crear **agentes de IA para automatización**, sistemas avanzados de **RAG (Retrieval Augmented Generation)** y aprovechar tecnologías como **VectorDB** y **Pinecone** para construir soluciones de datos robustas. Lidero equipos en el desarrollo de automatización inteligente y sistemas multiagente, combinando ML e IA Generativa.
 
-## "Call me if it looks impossible or nobody wants to do it"
+Mi experiencia también abarca **Ingeniería de Machine Learning**, **MLOps** y **NLP**, donde he concebido numerosos productos de datos en industrias como Banca, Mercados Personales, FinTech, Cadena de Suministro y Operaciones Legales. Me apasiona aplicar **Machine Learning a la Ciberseguridad (ML Sec)** y trabajar con **Analítica en Tiempo Real**.
 
----
-
-## What I'm Currently Up To
-
-- Working as an **Analyst** at Acceleration Economy Analyst and as **AI Freelance**
-- Developing **Intelligent Automation** and **Multi-Agentic systems** for multinational companies
-- Shaping the future of education by developing an **AI-powered tool** for educators
-- Regularly writing articles on [accelerationeconomy.com](https://accelerationeconomy.com)
+Como firme defensor del desarrollo de código abierto, soy **Microsoft MVP en Data Platform** desde 2019, coautor de *"Machine Learning in Power BI with R and Python"* y *"MLOps: from Notebook To Pipeline"*, y profesor universitario de ML / IA y Finanzas Cuantitativas.
 
 ---
 
-## Learning & Exploring
+## Dato curioso
 
-I'm always expanding my knowledge in:
+> *"Al parecer, algunos programadores de élite piensan que no sé programar en Python y que nunca fui desarrollador… ¡supongo que ser 'demasiado orientado a producto' me da alergia al código!"* Quién sabe...
 
-- **Data Engineering**
+---
+
+## "Llámame si parece imposible o nadie quiere hacerlo"
+
+---
+
+## En qué estoy trabajando actualmente
+
+- Trabajo como **Analista** en Acceleration Economy y como **Freelance de IA**
+- Desarrollo **Automatización Inteligente** y **sistemas Multiagente** para empresas multinacionales
+- Construyo el futuro de la educación desarrollando una **herramienta impulsada por IA** para docentes
+- Escribo artículos con regularidad en [accelerationeconomy.com](https://accelerationeconomy.com)
+
+---
+
+## Aprendiendo y explorando
+
+Siempre estoy ampliando mis conocimientos en:
+
+- **Ingeniería de Datos**
 - **Stream Analytics**
-- **Sec. ML** (applying ML to Cyber Security)
-- **Real Time ML** / Real Time analytics
+- **ML de Seguridad** (aplicar ML a la Ciberseguridad)
+- **ML en Tiempo Real** / Analítica en tiempo real
 
 ---
 
-## Let's Collaborate!
+## ¡Colaboremos!
 
-I'm keen to collaborate on **anything related to ML / AI**, especially projects applied to **Cybersecurity**.
+Me encantaría colaborar en **cualquier tema relacionado con ML / IA**, especialmente en proyectos aplicados a **Ciberseguridad**.
 
-Feel free to **ask me about**:
+No dudes en **preguntarme sobre**:
 
 - Power BI
-- Data Analysis
-- Machine Learning (ML), Artificial Intelligence (AI)
+- Análisis de Datos
+- Machine Learning (ML), Inteligencia Artificial (IA)
 - FinTech
-- AI Agents · HyperAutomation
+- Agentes de IA · Hiperautomatización
 
-I also enjoy helping with **Azure**.
+También disfruto ayudando con **Azure**.
 
 ---
 
-## Key Skills & Technologies
+## Habilidades y tecnologías clave
 
-### Core Areas
+### Áreas principales
 
-- Artificial Intelligence (AI)
-- Generative AI (GenAI)
-- Machine Learning Engineering
+- Inteligencia Artificial (IA)
+- IA Generativa (GenAI)
+- Ingeniería de Machine Learning
 - MLOps / CI/CD
-- Data Science / Advanced Analytics
-- AI Product Management
-- Business Intelligence & Data Quality
+- Ciencia de Datos / Analítica Avanzada
+- Gestión de Producto de IA
+- Inteligencia de Negocios y Calidad de Datos
 
-### Programming & Frameworks
+### Programación y frameworks
 
 - Python
 - TensorFlow
@@ -82,7 +82,7 @@ I also enjoy helping with **Azure**.
 - PySpark
 - LangChain, LangGraph, LlamaIndex, crewAI, smolagents, AutoGen
 
-### Cloud Platforms & Tools
+### Plataformas cloud y herramientas
 
 - Azure (Synapse, ML, Data Factory, DevOps, Copilot Studio)
 - AWS
@@ -92,28 +92,28 @@ I also enjoy helping with **Azure**.
 - UiPath, Power Automate (RPA)
 - VectorDB, Pinecone
 
-### Databases & Reporting
+### Bases de datos y reportería
 
 - SQL Server, Oracle, Salesforce
 - Power BI, Qlik, Tableau
 
-### Soft Skills
+### Habilidades blandas
 
-- Critical Thinking
-- Business Rationale
-- Problem Finder / Problem Solver
+- Pensamiento crítico
+- Visión de negocio
+- Buscador de problemas / Solucionador de problemas
 
 ---
 
-## Connect with Me
+## Conéctate conmigo
 
 - **LinkedIn:** [linkedin.com/in/tu-usuario](https://linkedin.com/in/tu-usuario)
 - **GitHub:** [github.com/tu-usuario](https://github.com/tu-usuario)
-- **Articles:** [accelerationeconomy.com](https://accelerationeconomy.com)
-- **My Book:** "Machine Learning in Power BI with R and Python"
+- **Artículos:** [accelerationeconomy.com](https://accelerationeconomy.com)
+- **Mi libro:** "Machine Learning in Power BI with R and Python"
 
 ---
 
-## Fun Fact
+## Dato curioso
 
-I've lived and worked in **7 countries across 3 continents!**
+¡He vivido y trabajado en **7 países de 3 continentes!**
